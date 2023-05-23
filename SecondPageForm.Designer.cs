@@ -47,7 +47,7 @@ namespace LibraMind
             this.BackPanel.Location = new System.Drawing.Point(0, 0);
             this.BackPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackPanel.Name = "BackPanel";
-            this.BackPanel.Size = new System.Drawing.Size(839, 538);
+            this.BackPanel.Size = new System.Drawing.Size(989, 625);
             this.BackPanel.TabIndex = 0;
             this.BackPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -57,7 +57,7 @@ namespace LibraMind
             this.SignUpButton.Font = new System.Drawing.Font("Harrington", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignUpButton.Image = ((System.Drawing.Image)(resources.GetObject("SignUpButton.Image")));
-            this.SignUpButton.Location = new System.Drawing.Point(562, 384);
+            this.SignUpButton.Location = new System.Drawing.Point(616, 429);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(144, 52);
             this.SignUpButton.TabIndex = 6;
@@ -69,7 +69,7 @@ namespace LibraMind
             this.LoginButton.Font = new System.Drawing.Font("Harrington", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginButton.Image = ((System.Drawing.Image)(resources.GetObject("LoginButton.Image")));
-            this.LoginButton.Location = new System.Drawing.Point(148, 384);
+            this.LoginButton.Location = new System.Drawing.Point(219, 429);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(130, 52);
             this.LoginButton.TabIndex = 5;
@@ -80,7 +80,7 @@ namespace LibraMind
             this.CaptionLabel.AutoSize = true;
             this.CaptionLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CaptionLabel.Location = new System.Drawing.Point(93, 216);
+            this.CaptionLabel.Location = new System.Drawing.Point(164, 240);
             this.CaptionLabel.Name = "CaptionLabel";
             this.CaptionLabel.Size = new System.Drawing.Size(684, 104);
             this.CaptionLabel.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace LibraMind
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(839, 538);
+            this.ClientSize = new System.Drawing.Size(989, 625);
             this.Controls.Add(this.BackPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -7,7 +7,7 @@ namespace LibraMind
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -47,6 +47,10 @@ namespace LibraMind
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.LogoPic = new System.Windows.Forms.PictureBox();
             this.RightPanel = new System.Windows.Forms.Panel();
+            this.EmailErrorLabel = new System.Windows.Forms.Label();
+            this.ConfirmPasswordErrorLabel = new System.Windows.Forms.Label();
+            this.PasswordErrorLabel = new System.Windows.Forms.Label();
+            this.UsernameErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TransBookPic)).BeginInit();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
@@ -59,18 +63,19 @@ namespace LibraMind
             this.CheckAgreeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CheckAgreeLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckAgreeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CheckAgreeLabel.Location = new System.Drawing.Point(79, 549);
+            this.CheckAgreeLabel.Location = new System.Drawing.Point(79, 570);
             this.CheckAgreeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CheckAgreeLabel.Name = "CheckAgreeLabel";
             this.CheckAgreeLabel.Size = new System.Drawing.Size(321, 23);
             this.CheckAgreeLabel.TabIndex = 13;
             this.CheckAgreeLabel.Text = "I accept the Magical Agreement";
+            this.CheckAgreeLabel.Click += new System.EventHandler(this.CheckAgreeLabel_Click);
             // 
             // CheckAgreeCheckBox
             // 
             this.CheckAgreeCheckBox.AutoSize = true;
             this.CheckAgreeCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.CheckAgreeCheckBox.Location = new System.Drawing.Point(49, 551);
+            this.CheckAgreeCheckBox.Location = new System.Drawing.Point(49, 570);
             this.CheckAgreeCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CheckAgreeCheckBox.Name = "CheckAgreeCheckBox";
             this.CheckAgreeCheckBox.Size = new System.Drawing.Size(22, 21);
@@ -155,7 +160,7 @@ namespace LibraMind
             this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PasswordLabel.Location = new System.Drawing.Point(18, 234);
+            this.PasswordLabel.Location = new System.Drawing.Point(28, 234);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(144, 31);
@@ -254,6 +259,10 @@ namespace LibraMind
             // 
             this.RightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RightPanel.BackgroundImage")));
             this.RightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RightPanel.Controls.Add(this.EmailErrorLabel);
+            this.RightPanel.Controls.Add(this.ConfirmPasswordErrorLabel);
+            this.RightPanel.Controls.Add(this.PasswordErrorLabel);
+            this.RightPanel.Controls.Add(this.UsernameErrorLabel);
             this.RightPanel.Controls.Add(this.CheckAgreeLabel);
             this.RightPanel.Controls.Add(this.CheckAgreeCheckBox);
             this.RightPanel.Controls.Add(this.SignUpButton);
@@ -272,6 +281,54 @@ namespace LibraMind
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(460, 692);
             this.RightPanel.TabIndex = 3;
+            // 
+            // EmailErrorLabel
+            // 
+            this.EmailErrorLabel.AutoSize = true;
+            this.EmailErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmailErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.EmailErrorLabel.Location = new System.Drawing.Point(165, 529);
+            this.EmailErrorLabel.Name = "EmailErrorLabel";
+            this.EmailErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.EmailErrorLabel.TabIndex = 17;
+            this.EmailErrorLabel.Text = " ";
+            // 
+            // ConfirmPasswordErrorLabel
+            // 
+            this.ConfirmPasswordErrorLabel.AutoSize = true;
+            this.ConfirmPasswordErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ConfirmPasswordErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ConfirmPasswordErrorLabel.Location = new System.Drawing.Point(165, 417);
+            this.ConfirmPasswordErrorLabel.Name = "ConfirmPasswordErrorLabel";
+            this.ConfirmPasswordErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.ConfirmPasswordErrorLabel.TabIndex = 16;
+            this.ConfirmPasswordErrorLabel.Text = " ";
+            // 
+            // PasswordErrorLabel
+            // 
+            this.PasswordErrorLabel.AutoSize = true;
+            this.PasswordErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.PasswordErrorLabel.Location = new System.Drawing.Point(165, 308);
+            this.PasswordErrorLabel.Name = "PasswordErrorLabel";
+            this.PasswordErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.PasswordErrorLabel.TabIndex = 15;
+            this.PasswordErrorLabel.Text = " ";
+            // 
+            // UsernameErrorLabel
+            // 
+            this.UsernameErrorLabel.AutoSize = true;
+            this.UsernameErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.UsernameErrorLabel.Location = new System.Drawing.Point(165, 194);
+            this.UsernameErrorLabel.Name = "UsernameErrorLabel";
+            this.UsernameErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.UsernameErrorLabel.TabIndex = 14;
+            this.UsernameErrorLabel.Text = " ";
             // 
             // SignUpForm
             // 
@@ -312,6 +369,10 @@ namespace LibraMind
         private System.Windows.Forms.Panel LeftPanel;
         private System.Windows.Forms.PictureBox LogoPic;
         private System.Windows.Forms.Panel RightPanel;
+        private System.Windows.Forms.Label ConfirmPasswordErrorLabel;
+        private System.Windows.Forms.Label PasswordErrorLabel;
+        private System.Windows.Forms.Label UsernameErrorLabel;
+        private System.Windows.Forms.Label EmailErrorLabel;
     }
 }
 

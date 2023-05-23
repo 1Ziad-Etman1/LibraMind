@@ -54,6 +54,7 @@ namespace LibraMind
             // SignUpButton
             // 
             this.SignUpButton.AutoSize = true;
+            this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpButton.Font = new System.Drawing.Font("Harrington", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignUpButton.Image = ((System.Drawing.Image)(resources.GetObject("SignUpButton.Image")));
@@ -67,6 +68,7 @@ namespace LibraMind
             // LoginButton
             // 
             this.LoginButton.AutoSize = true;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Harrington", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginButton.Image = ((System.Drawing.Image)(resources.GetObject("LoginButton.Image")));

@@ -34,11 +34,13 @@ namespace LibraMind
             this.LogoLabel = new System.Windows.Forms.Label();
             this.LogoPic = new System.Windows.Forms.PictureBox();
             this.RightPanel = new System.Windows.Forms.Panel();
+            this.PasswordErrorLabel = new System.Windows.Forms.Label();
+            this.EmailErrorLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordInput = new System.Windows.Forms.TextBox();
             this.PasswordLabel = new System.Windows.Forms.Label();
-            this.UsernameInput = new System.Windows.Forms.TextBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.EmailInput = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.Label();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
@@ -90,11 +92,13 @@ namespace LibraMind
             this.RightPanel.BackColor = System.Drawing.Color.Black;
             this.RightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RightPanel.BackgroundImage")));
             this.RightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RightPanel.Controls.Add(this.PasswordErrorLabel);
+            this.RightPanel.Controls.Add(this.EmailErrorLabel);
             this.RightPanel.Controls.Add(this.LoginButton);
             this.RightPanel.Controls.Add(this.PasswordInput);
             this.RightPanel.Controls.Add(this.PasswordLabel);
-            this.RightPanel.Controls.Add(this.UsernameInput);
-            this.RightPanel.Controls.Add(this.UsernameLabel);
+            this.RightPanel.Controls.Add(this.EmailInput);
+            this.RightPanel.Controls.Add(this.EmailLabel);
             this.RightPanel.Controls.Add(this.LoginLabel);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.RightPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +107,30 @@ namespace LibraMind
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(437, 692);
             this.RightPanel.TabIndex = 3;
+            // 
+            // PasswordErrorLabel
+            // 
+            this.PasswordErrorLabel.AutoSize = true;
+            this.PasswordErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.PasswordErrorLabel.Location = new System.Drawing.Point(148, 430);
+            this.PasswordErrorLabel.Name = "PasswordErrorLabel";
+            this.PasswordErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.PasswordErrorLabel.TabIndex = 16;
+            this.PasswordErrorLabel.Text = " ";
+            // 
+            // EmailErrorLabel
+            // 
+            this.EmailErrorLabel.AutoSize = true;
+            this.EmailErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmailErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.EmailErrorLabel.Location = new System.Drawing.Point(148, 275);
+            this.EmailErrorLabel.Name = "EmailErrorLabel";
+            this.EmailErrorLabel.Size = new System.Drawing.Size(26, 27);
+            this.EmailErrorLabel.TabIndex = 15;
+            this.EmailErrorLabel.Text = " ";
             // 
             // LoginButton
             // 
@@ -116,14 +144,16 @@ namespace LibraMind
             this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "Enter with Magicians";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PasswordInput
             // 
+            this.PasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordInput.Location = new System.Drawing.Point(48, 397);
             this.PasswordInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.PasswordChar = '*';
-            this.PasswordInput.Size = new System.Drawing.Size(349, 28);
+            this.PasswordInput.Size = new System.Drawing.Size(349, 32);
             this.PasswordInput.TabIndex = 4;
             // 
             // PasswordLabel
@@ -139,26 +169,27 @@ namespace LibraMind
             this.PasswordLabel.TabIndex = 3;
             this.PasswordLabel.Text = "Password:";
             // 
-            // UsernameInput
+            // EmailInput
             // 
-            this.UsernameInput.Location = new System.Drawing.Point(48, 242);
-            this.UsernameInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.UsernameInput.Name = "UsernameInput";
-            this.UsernameInput.Size = new System.Drawing.Size(349, 28);
-            this.UsernameInput.TabIndex = 2;
+            this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailInput.Location = new System.Drawing.Point(48, 242);
+            this.EmailInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EmailInput.Name = "EmailInput";
+            this.EmailInput.Size = new System.Drawing.Size(349, 32);
+            this.EmailInput.TabIndex = 2;
             // 
-            // UsernameLabel
+            // EmailLabel
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.UsernameLabel.Location = new System.Drawing.Point(42, 185);
-            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(153, 31);
-            this.UsernameLabel.TabIndex = 1;
-            this.UsernameLabel.Text = "Username:";
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmailLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.EmailLabel.Location = new System.Drawing.Point(42, 185);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(97, 31);
+            this.EmailLabel.TabIndex = 1;
+            this.EmailLabel.Text = "Email:";
             // 
             // LoginLabel
             // 
@@ -202,8 +233,10 @@ namespace LibraMind
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.TextBox PasswordInput;
         private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.TextBox UsernameInput;
-        private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.TextBox EmailInput;
+        private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.Label LoginLabel;
+        private System.Windows.Forms.Label EmailErrorLabel;
+        private System.Windows.Forms.Label PasswordErrorLabel;
     }
 }

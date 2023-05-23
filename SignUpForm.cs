@@ -95,16 +95,16 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "INSERT INTO USER (F_NAME, L_NAME, TOTAL_FINE, EMAIL, PASSWORD, NAATION, POSITION)" +
-                        " VALUES (@Param1, @Param2, @Param3, @Param4, @Param5, @Param6, @Param7)";
+                    string sqlCommand = "INSERT INTO [USER] (USER_ID, F_NAME, L_NAME, TOTAL_FINE, EMAIL, PASSWORD, NATIONALITY, POSITION)" +
+                        " VALUES (55, @Param1, 'FCAI', 0.0, @Param2, @Param3, 'Egyption', 'Student')";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
                     command.Parameters.AddWithValue("@param1", Uname);
-                    command.Parameters.AddWithValue("@param2", " ");
-                    command.Parameters.AddWithValue("@param3", 0.0);
-                    command.Parameters.AddWithValue("@param4", Email);
-                    command.Parameters.AddWithValue("@param5", Pass);
-                    command.Parameters.AddWithValue("@param6", "Egyption");
-                    command.Parameters.AddWithValue("@param7", "Student");
+                    //command.Parameters.AddWithValue("@param2", " ");
+                    //command.Parameters.AddWithValue("@param3", 0.0);
+                    command.Parameters.AddWithValue("@param2", Email);
+                    command.Parameters.AddWithValue("@param3", Pass);
+                    //command.Parameters.AddWithValue("@param5", "Egyption");
+                    //command.Parameters.AddWithValue("@param6", "Student");
 
                     command.ExecuteNonQuery();
 

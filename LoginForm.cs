@@ -36,7 +36,7 @@ namespace LibraMind
                 {
                     EmailErrorLabel.Text = "";
                 }
-                if (PasswordInput.TextLength == 0 || (PasswordInput.TextLength > 0 && PasswordInput.TextLength < 8))
+                if (PasswordInput.TextLength < 8)
                 {
                     PasswordErrorLabel.Text = "Required!";
                 }
@@ -47,15 +47,36 @@ namespace LibraMind
             }
             else
             {
-                string Uname = EmailInput.Text;
+                string Email = EmailInput.Text;
                 string Pass = PasswordInput.Text;
-                
 
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string query = "SELECT EMAIL, PASSWORD FROM [USER] WHERE EMAIL=@Param1";
+                    SqlCommand command = new SqlCommand(query, con);
+                    command.Parameters.AddWithValue("@Param1", Email);
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    string Email1Value = reader.GetString(0);
+                    string PassValue = reader.GetString(1);
 
-                this.Hide(); // Hide the current form
-                //SecondPageForm secPage = new SecondPageForm();
-                //secPage.ShowDialog(); // Show the other form as a modal dialog
-                this.Close(); // Close the current form
+                    reader.Close();
+                    con.Close();
+                    //alicejohnson@example.com
+                    //password3
+                    if (Pass == PassValue)
+                    {
+                        //EmailErrorLabel.ForeColor = PasswordErrorLabel.ForeColor =System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); ;
+                        //EmailErrorLabel.Text = PasswordErrorLabel.Text = "Confirmed!!!!!!";
+                         
+                        this.Hide(); // Hide the current form
+                                     //SecondPageForm secPage = new SecondPageForm();
+                                     //secPage.ShowDialog(); // Show the other form as a modal dialog
+                        this.Close(); // Close the current form
+                    }                    
+                }             
             }
         }
     }

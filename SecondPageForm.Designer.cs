@@ -1,7 +1,7 @@
 ﻿
 namespace LibraMind
 {
-    partial class SecondPageForm
+    public partial class SecondPageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@ namespace LibraMind
             this.SignUpButton.Size = new System.Drawing.Size(144, 52);
             this.SignUpButton.TabIndex = 6;
             this.SignUpButton.Text = "Enroll";
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // LoginButton
             // 
@@ -74,6 +75,7 @@ namespace LibraMind
             this.LoginButton.Size = new System.Drawing.Size(130, 52);
             this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "Enter";
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // CaptionLabel
             // 

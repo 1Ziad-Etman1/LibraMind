@@ -21,5 +21,13 @@ namespace LibraMind
         {
             Application.Exit();
         }
+
+        private void GoHomeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            SecondPageForm secPage = new SecondPageForm();
+            secPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
     }
 }

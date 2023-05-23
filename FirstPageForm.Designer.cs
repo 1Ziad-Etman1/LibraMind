@@ -77,6 +77,7 @@ namespace LibraMind
             this.GoHomeButton.Size = new System.Drawing.Size(506, 71);
             this.GoHomeButton.TabIndex = 2;
             this.GoHomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GoHomeButton.Click += new System.EventHandler(this.GoHomeButton_Click);
             // 
             // LogoLabel
             // 

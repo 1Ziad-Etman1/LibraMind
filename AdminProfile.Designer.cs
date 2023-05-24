@@ -30,16 +30,7 @@ namespace LibraMind
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminProfile));
-            this.IdLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PositionLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.NationalityLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ProfileLabel = new System.Windows.Forms.Label();
-            this.UsernameLabel = new System.Windows.Forms.Label();
             this.ProfilePic = new System.Windows.Forms.PictureBox();
             this.DashBoardIcon = new System.Windows.Forms.PictureBox();
             this.LogoutLabelBtn = new System.Windows.Forms.Label();
@@ -54,95 +45,24 @@ namespace LibraMind
             this.DashBoardLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
+            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.OkBtn = new System.Windows.Forms.Label();
+            this.IdInput = new System.Windows.Forms.TextBox();
+            this.IdLabel = new System.Windows.Forms.Label();
+            this.PositionLabel = new System.Windows.Forms.Label();
+            this.Position = new System.Windows.Forms.Label();
+            this.NationalityLabel = new System.Windows.Forms.Label();
+            this.Nationallity = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.DashBoardPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // IdLabel
-            // 
-            this.IdLabel.AutoSize = true;
-            this.IdLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.IdLabel.Location = new System.Drawing.Point(470, 569);
-            this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(0, 41);
-            this.IdLabel.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(333, 569);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 41);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "ID: ";
-            // 
-            // PositionLabel
-            // 
-            this.PositionLabel.AutoSize = true;
-            this.PositionLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PositionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PositionLabel.Location = new System.Drawing.Point(531, 447);
-            this.PositionLabel.Name = "PositionLabel";
-            this.PositionLabel.Size = new System.Drawing.Size(0, 41);
-            this.PositionLabel.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(339, 447);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 41);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Position: ";
-            // 
-            // NationalityLabel
-            // 
-            this.NationalityLabel.AutoSize = true;
-            this.NationalityLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationalityLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NationalityLabel.Location = new System.Drawing.Point(600, 322);
-            this.NationalityLabel.Name = "NationalityLabel";
-            this.NationalityLabel.Size = new System.Drawing.Size(0, 41);
-            this.NationalityLabel.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(333, 322);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 41);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Nationality:";
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PasswordLabel.Location = new System.Drawing.Point(582, 192);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(0, 41);
-            this.PasswordLabel.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(333, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 41);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Password: ";
             // 
             // ProfileLabel
             // 
@@ -154,16 +74,6 @@ namespace LibraMind
             this.ProfileLabel.Size = new System.Drawing.Size(156, 47);
             this.ProfileLabel.TabIndex = 4;
             this.ProfileLabel.Text = "Profile";
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.UsernameLabel.Location = new System.Drawing.Point(93, 353);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
-            this.UsernameLabel.TabIndex = 3;
             // 
             // ProfilePic
             // 
@@ -318,17 +228,21 @@ namespace LibraMind
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.IdLabel);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.PositionLabel);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.NationalityLabel);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.PasswordLabel);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ProfileLabel);
             this.panel1.Controls.Add(this.UsernameLabel);
+            this.panel1.Controls.Add(this.EmailLabel);
+            this.panel1.Controls.Add(this.Email);
+            this.panel1.Controls.Add(this.ErrorLabel);
+            this.panel1.Controls.Add(this.OkBtn);
+            this.panel1.Controls.Add(this.IdInput);
+            this.panel1.Controls.Add(this.IdLabel);
+            this.panel1.Controls.Add(this.PositionLabel);
+            this.panel1.Controls.Add(this.Position);
+            this.panel1.Controls.Add(this.NationalityLabel);
+            this.panel1.Controls.Add(this.Nationallity);
+            this.panel1.Controls.Add(this.PasswordLabel);
+            this.panel1.Controls.Add(this.Password);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.ProfileLabel);
             this.panel1.Controls.Add(this.ProfilePic);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(342, 0);
@@ -348,6 +262,154 @@ namespace LibraMind
             this.label2.Size = new System.Drawing.Size(338, 56);
             this.label2.TabIndex = 13;
             this.label2.Text = "The Great Hall";
+            // 
+            // EmailLabel
+            // 
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.EmailLabel.Location = new System.Drawing.Point(510, 205);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(0, 41);
+            this.EmailLabel.TabIndex = 42;
+            this.EmailLabel.Visible = false;
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Email.Location = new System.Drawing.Point(338, 205);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(134, 41);
+            this.Email.TabIndex = 41;
+            this.Email.Text = "Email:";
+            this.Email.Visible = false;
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(713, 263);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(188, 37);
+            this.ErrorLabel.TabIndex = 40;
+            this.ErrorLabel.Text = "Required!";
+            this.ErrorLabel.Visible = false;
+            // 
+            // OkBtn
+            // 
+            this.OkBtn.AutoSize = true;
+            this.OkBtn.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OkBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.OkBtn.Image = ((System.Drawing.Image)(resources.GetObject("OkBtn.Image")));
+            this.OkBtn.Location = new System.Drawing.Point(588, 258);
+            this.OkBtn.Name = "OkBtn";
+            this.OkBtn.Size = new System.Drawing.Size(65, 42);
+            this.OkBtn.TabIndex = 39;
+            this.OkBtn.Text = "OK";
+            this.OkBtn.Click += new System.EventHandler(this.OkBtn_Click);
+            // 
+            // IdInput
+            // 
+            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInput.Location = new System.Drawing.Point(455, 258);
+            this.IdInput.Name = "IdInput";
+            this.IdInput.Size = new System.Drawing.Size(87, 37);
+            this.IdInput.TabIndex = 38;
+            this.IdInput.WordWrap = false;
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IdLabel.Location = new System.Drawing.Point(261, 258);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(188, 41);
+            this.IdLabel.TabIndex = 37;
+            this.IdLabel.Text = "Your ID: ";
+            // 
+            // PositionLabel
+            // 
+            this.PositionLabel.AutoSize = true;
+            this.PositionLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PositionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PositionLabel.Location = new System.Drawing.Point(530, 503);
+            this.PositionLabel.Name = "PositionLabel";
+            this.PositionLabel.Size = new System.Drawing.Size(0, 41);
+            this.PositionLabel.TabIndex = 36;
+            this.PositionLabel.Visible = false;
+            // 
+            // Position
+            // 
+            this.Position.AutoSize = true;
+            this.Position.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Position.Location = new System.Drawing.Point(338, 503);
+            this.Position.Name = "Position";
+            this.Position.Size = new System.Drawing.Size(186, 41);
+            this.Position.TabIndex = 35;
+            this.Position.Text = "Position: ";
+            this.Position.Visible = false;
+            // 
+            // NationalityLabel
+            // 
+            this.NationalityLabel.AutoSize = true;
+            this.NationalityLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NationalityLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.NationalityLabel.Location = new System.Drawing.Point(610, 390);
+            this.NationalityLabel.Name = "NationalityLabel";
+            this.NationalityLabel.Size = new System.Drawing.Size(0, 41);
+            this.NationalityLabel.TabIndex = 34;
+            this.NationalityLabel.Visible = false;
+            // 
+            // Nationallity
+            // 
+            this.Nationallity.AutoSize = true;
+            this.Nationallity.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nationallity.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Nationallity.Location = new System.Drawing.Point(338, 390);
+            this.Nationallity.Name = "Nationallity";
+            this.Nationallity.Size = new System.Drawing.Size(243, 41);
+            this.Nationallity.TabIndex = 33;
+            this.Nationallity.Text = "Nationality:";
+            this.Nationallity.Visible = false;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PasswordLabel.Location = new System.Drawing.Point(553, 300);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(0, 41);
+            this.PasswordLabel.TabIndex = 32;
+            this.PasswordLabel.Visible = false;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Password.Location = new System.Drawing.Point(338, 300);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(209, 41);
+            this.Password.TabIndex = 31;
+            this.Password.Text = "Password: ";
+            this.Password.Visible = false;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.UsernameLabel.Location = new System.Drawing.Point(93, 354);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
+            this.UsernameLabel.TabIndex = 43;
+            this.UsernameLabel.Visible = false;
             // 
             // AdminProfile
             // 
@@ -372,16 +434,7 @@ namespace LibraMind
         }
 
         #endregion
-        private System.Windows.Forms.Label IdLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label PositionLabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label NationalityLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ProfileLabel;
-        private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.PictureBox ProfilePic;
         private System.Windows.Forms.PictureBox DashBoardIcon;
         private System.Windows.Forms.Label LogoutLabelBtn;
@@ -396,5 +449,18 @@ namespace LibraMind
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label EditProfileLabelBtn;
         private System.Windows.Forms.Label ViewRequistLabelBtn;
+        private System.Windows.Forms.Label EmailLabel;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Label OkBtn;
+        private System.Windows.Forms.TextBox IdInput;
+        private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.Label PositionLabel;
+        private System.Windows.Forms.Label Position;
+        private System.Windows.Forms.Label NationalityLabel;
+        private System.Windows.Forms.Label Nationallity;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label Password;
+        private System.Windows.Forms.Label UsernameLabel;
     }
 }

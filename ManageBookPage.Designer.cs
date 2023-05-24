@@ -45,11 +45,11 @@ namespace LibraMind
             this.ProfileLabelBtn = new System.Windows.Forms.Label();
             this.ProfessorLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.DropBookPanel = new System.Windows.Forms.Panel();
             this.DropBtn = new System.Windows.Forms.Label();
             this.ISBNInputDrop = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.ISBNLabelDrop = new System.Windows.Forms.Label();
+            this.AddBookPanel = new System.Windows.Forms.Panel();
             this.AddBtn = new System.Windows.Forms.Label();
             this.NumOfCopiesInput = new System.Windows.Forms.TextBox();
             this.ISBNInput = new System.Windows.Forms.TextBox();
@@ -62,8 +62,8 @@ namespace LibraMind
             this.DashBoardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.RightPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.DropBookPanel.SuspendLayout();
+            this.AddBookPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // EditProfileLabelBtn
@@ -249,8 +249,8 @@ namespace LibraMind
             this.RightPanel.BackColor = System.Drawing.Color.Transparent;
             this.RightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RightPanel.BackgroundImage")));
             this.RightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RightPanel.Controls.Add(this.panel1);
-            this.RightPanel.Controls.Add(this.panel2);
+            this.RightPanel.Controls.Add(this.DropBookPanel);
+            this.RightPanel.Controls.Add(this.AddBookPanel);
             this.RightPanel.Controls.Add(this.label2);
             this.RightPanel.Controls.Add(this.DropBookLabelBtn);
             this.RightPanel.Controls.Add(this.AddBookLabelBtn);
@@ -262,16 +262,16 @@ namespace LibraMind
             this.RightPanel.Size = new System.Drawing.Size(1005, 673);
             this.RightPanel.TabIndex = 7;
             // 
-            // panel1
+            // DropBookPanel
             // 
-            this.panel1.Controls.Add(this.DropBtn);
-            this.panel1.Controls.Add(this.ISBNInputDrop);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(31, 508);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(962, 153);
-            this.panel1.TabIndex = 15;
-            this.panel1.Visible = false;
+            this.DropBookPanel.Controls.Add(this.DropBtn);
+            this.DropBookPanel.Controls.Add(this.ISBNInputDrop);
+            this.DropBookPanel.Controls.Add(this.ISBNLabelDrop);
+            this.DropBookPanel.Location = new System.Drawing.Point(31, 508);
+            this.DropBookPanel.Name = "DropBookPanel";
+            this.DropBookPanel.Size = new System.Drawing.Size(962, 153);
+            this.DropBookPanel.TabIndex = 15;
+            this.DropBookPanel.Visible = false;
             // 
             // DropBtn
             // 
@@ -284,6 +284,7 @@ namespace LibraMind
             this.DropBtn.Size = new System.Drawing.Size(113, 47);
             this.DropBtn.TabIndex = 27;
             this.DropBtn.Text = "Drop";
+            this.DropBtn.Click += new System.EventHandler(this.DropBtn_Click);
             // 
             // ISBNInputDrop
             // 
@@ -294,31 +295,31 @@ namespace LibraMind
             this.ISBNInputDrop.TabIndex = 26;
             this.ISBNInputDrop.WordWrap = false;
             // 
-            // label1
+            // ISBNLabelDrop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(71, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 31);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Enter the Book ISBN: ";
+            this.ISBNLabelDrop.AutoSize = true;
+            this.ISBNLabelDrop.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabelDrop.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ISBNLabelDrop.Location = new System.Drawing.Point(71, 50);
+            this.ISBNLabelDrop.Name = "ISBNLabelDrop";
+            this.ISBNLabelDrop.Size = new System.Drawing.Size(318, 31);
+            this.ISBNLabelDrop.TabIndex = 25;
+            this.ISBNLabelDrop.Text = "Enter the Book ISBN: ";
             // 
-            // panel2
+            // AddBookPanel
             // 
-            this.panel2.Controls.Add(this.AddBtn);
-            this.panel2.Controls.Add(this.NumOfCopiesInput);
-            this.panel2.Controls.Add(this.ISBNInput);
-            this.panel2.Controls.Add(this.BookNameInput);
-            this.panel2.Controls.Add(this.BookISBNLabel);
-            this.panel2.Controls.Add(this.BookCopiesLabel);
-            this.panel2.Controls.Add(this.BookNameLabel);
-            this.panel2.Location = new System.Drawing.Point(31, 240);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(962, 196);
-            this.panel2.TabIndex = 14;
-            this.panel2.Visible = false;
+            this.AddBookPanel.Controls.Add(this.AddBtn);
+            this.AddBookPanel.Controls.Add(this.NumOfCopiesInput);
+            this.AddBookPanel.Controls.Add(this.ISBNInput);
+            this.AddBookPanel.Controls.Add(this.BookNameInput);
+            this.AddBookPanel.Controls.Add(this.BookISBNLabel);
+            this.AddBookPanel.Controls.Add(this.BookCopiesLabel);
+            this.AddBookPanel.Controls.Add(this.BookNameLabel);
+            this.AddBookPanel.Location = new System.Drawing.Point(31, 240);
+            this.AddBookPanel.Name = "AddBookPanel";
+            this.AddBookPanel.Size = new System.Drawing.Size(962, 196);
+            this.AddBookPanel.TabIndex = 14;
+            this.AddBookPanel.Visible = false;
             // 
             // AddBtn
             // 
@@ -331,6 +332,7 @@ namespace LibraMind
             this.AddBtn.Size = new System.Drawing.Size(97, 47);
             this.AddBtn.TabIndex = 26;
             this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // NumOfCopiesInput
             // 
@@ -403,6 +405,7 @@ namespace LibraMind
             this.DropBookLabelBtn.Size = new System.Drawing.Size(221, 47);
             this.DropBookLabelBtn.TabIndex = 9;
             this.DropBookLabelBtn.Text = "Drop Book";
+            this.DropBookLabelBtn.Click += new System.EventHandler(this.DropBookLabelBtn_Click);
             // 
             // AddBookLabelBtn
             // 
@@ -415,6 +418,7 @@ namespace LibraMind
             this.AddBookLabelBtn.Size = new System.Drawing.Size(205, 47);
             this.AddBookLabelBtn.TabIndex = 5;
             this.AddBookLabelBtn.Text = "Add Book";
+            this.AddBookLabelBtn.Click += new System.EventHandler(this.AddBookLabelBtn_Click);
             // 
             // ManageBookPage
             // 
@@ -433,10 +437,10 @@ namespace LibraMind
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).EndInit();
             this.RightPanel.ResumeLayout(false);
             this.RightPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.DropBookPanel.ResumeLayout(false);
+            this.DropBookPanel.PerformLayout();
+            this.AddBookPanel.ResumeLayout(false);
+            this.AddBookPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -460,17 +464,17 @@ namespace LibraMind
         private System.Windows.Forms.Panel RightPanel;
         private System.Windows.Forms.Label DropBookLabelBtn;
         private System.Windows.Forms.Label AddBookLabelBtn;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel AddBookPanel;
         private System.Windows.Forms.TextBox NumOfCopiesInput;
         private System.Windows.Forms.TextBox ISBNInput;
         private System.Windows.Forms.TextBox BookNameInput;
         private System.Windows.Forms.Label BookISBNLabel;
         private System.Windows.Forms.Label BookCopiesLabel;
         private System.Windows.Forms.Label BookNameLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel DropBookPanel;
         private System.Windows.Forms.Label DropBtn;
         private System.Windows.Forms.TextBox ISBNInputDrop;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ISBNLabelDrop;
         private System.Windows.Forms.Label AddBtn;
     }
 }

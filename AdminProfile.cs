@@ -68,6 +68,7 @@ namespace LibraMind
                     Nationallity.Visible = true;
                     NationalityLabel.Visible = true;
                     NationalityLabel.Text = nationality;
+                    ErrorLabel.Visible = false;
                 }
             }
             else

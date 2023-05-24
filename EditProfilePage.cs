@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LibraMind
 {
@@ -123,10 +124,53 @@ namespace LibraMind
         {
 
         }
+        public string conString = "Data Source=KINGAL;Initial Catalog=LIBRARY;Integrated Security=True";
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            string id = IdInput.Text;
+            if (EmailInput.TextLength > 0 && PasswordInput.TextLength > 0)
+            {
+                string Pass = PasswordInput.Text;
+                string Email = EmailInput.Text;
 
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE ID = @Param3";
+                    SqlCommand command = new SqlCommand(sqlCommand, con);
+
+                    command.Parameters.AddWithValue("@param1", Email);
+                    command.Parameters.AddWithValue("@param2", Pass);
+                    command.Parameters.AddWithValue("@param3", id);
+
+                    command.ExecuteNonQuery();
+
+                    con.Close();
+                    EmailInput.Text = "";
+                    PasswordInput.Text = "";
+
+                }
+            }
+        }
+
+        private void OkBtn_Click(object sender, EventArgs e)
+        {
+            if (IdInput.TextLength != 0)
+            {
+                string id = IdInput.Text;
+                    
+                IdLabel.Visible = false;
+                IdInput.Visible = false;
+                OkBtn.Visible = false;
+                EmailLabel.Visible = true;
+                EmailInput.Visible = true;
+                PasswordLabel.Visible = true;
+                PasswordInput.Visible = true;
+                UpdateBtn.Visible = true;
+                }
+            }
         }
     }
 }

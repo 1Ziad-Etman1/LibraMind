@@ -54,14 +54,14 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string query = "SELECT EMAIL, PASSWORD FROM [USER] WHERE EMAIL=@Param1";
+                    string query = "SELECT EMAIL, PASSWORD, POSITION FROM [USER] WHERE EMAIL=@Param1";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", Email);
                     SqlDataReader reader = command.ExecuteReader();
                     reader.Read();
                     string Email1Value = reader.GetString(0);
                     string PassValue = reader.GetString(1);
-
+                    string Position = reader.GetString(2);
                     reader.Close();
                     con.Close();
                     //alicejohnson@example.com
@@ -70,11 +70,20 @@ namespace LibraMind
                     {
                         //EmailErrorLabel.ForeColor = PasswordErrorLabel.ForeColor =System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); ;
                         //EmailErrorLabel.Text = PasswordErrorLabel.Text = "Confirmed!!!!!!";
-                         
-                        this.Hide(); // Hide the current form
-                                     //SecondPageForm secPage = new SecondPageForm();
-                                     //secPage.ShowDialog(); // Show the other form as a modal dialog
-                        this.Close(); // Close the current form
+                        if(Position == "Staff")
+                        {
+                            this.Hide(); // Hide the current form
+                            GreatHallAdmin gha = new GreatHallAdmin();
+                            gha.ShowDialog(); // Show the other form as a modal dialog
+                            this.Close(); // Close the current form
+                        }
+                        else
+                        {
+                            this.Hide(); // Hide the current form
+                            GreatHallStudent ghs = new GreatHallStudent();
+                            ghs.ShowDialog(); // Show the other form as a modal dialog
+                            this.Close(); // Close the current form
+                        }
                     }                    
                 }             
             }

@@ -101,6 +101,7 @@ namespace LibraMind
             this.ReturnLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ReturnLabelBtn.TabIndex = 4;
             this.ReturnLabelBtn.Text = "Return";
+            this.ReturnLabelBtn.Click += new System.EventHandler(this.ReturnLabelBtn_Click);
             // 
             // BorrowLabelBtn
             // 

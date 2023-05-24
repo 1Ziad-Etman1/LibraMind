@@ -50,6 +50,7 @@ namespace LibraMind
             this.RightPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Error = new System.Windows.Forms.Label();
             this.DashBoardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +62,7 @@ namespace LibraMind
             this.FineLabel.AutoSize = true;
             this.FineLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FineLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.FineLabel.Location = new System.Drawing.Point(171, 379);
+            this.FineLabel.Location = new System.Drawing.Point(176, 375);
             this.FineLabel.Name = "FineLabel";
             this.FineLabel.Size = new System.Drawing.Size(0, 36);
             this.FineLabel.TabIndex = 13;
@@ -173,11 +174,12 @@ namespace LibraMind
             this.Fine.AutoSize = true;
             this.Fine.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fine.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fine.Location = new System.Drawing.Point(49, 379);
+            this.Fine.Location = new System.Drawing.Point(49, 375);
             this.Fine.Name = "Fine";
             this.Fine.Size = new System.Drawing.Size(105, 36);
             this.Fine.TabIndex = 12;
             this.Fine.Text = "Fine: ";
+            this.Fine.Visible = false;
             // 
             // ReturnBtn
             // 
@@ -190,6 +192,7 @@ namespace LibraMind
             this.ReturnBtn.Size = new System.Drawing.Size(146, 47);
             this.ReturnBtn.TabIndex = 10;
             this.ReturnBtn.Text = "Return";
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // label6
             // 
@@ -258,6 +261,7 @@ namespace LibraMind
             // RightPanel
             // 
             this.RightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.RightPanel.Controls.Add(this.Error);
             this.RightPanel.Controls.Add(this.label2);
             this.RightPanel.Controls.Add(this.FineLabel);
             this.RightPanel.Controls.Add(this.Fine);
@@ -295,6 +299,18 @@ namespace LibraMind
             this.label1.Size = new System.Drawing.Size(278, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter the ISBN :";
+            // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.Error.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error.ForeColor = System.Drawing.Color.Yellow;
+            this.Error.Location = new System.Drawing.Point(199, 303);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(189, 31);
+            this.Error.TabIndex = 15;
+            this.Error.Text = "Wrong ISBN";
+            this.Error.Visible = false;
             // 
             // ReturnPage
             // 
@@ -339,5 +355,6 @@ namespace LibraMind
         private System.Windows.Forms.Panel RightPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Error;
     }
 }

@@ -14,18 +14,46 @@ namespace LibraMind
         [STAThread]
         static void Main()
         {
+            User u ;
+            Book b = new Book();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FirstPageForm());
         }
     }
 
-    class User
+    /*class User
     {
-        public string name { set; get; }
+        public string static name ;
         public string password { set; get; }
         public string Email { set; get; }
         public string pos { set; get; }
+    }*/
+
+    public class User
+    {
+        private static User instance;
+        public string name {set; get;}
+        public string password { set; get; }
+        public string Email { set; get; }
+        public string pos { set; get; }
+
+        private User()
+        {
+            // Private constructor to prevent external instantiation
+        }
+
+        public static User Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new User();
+                }
+                return instance;
+            }
+        }
     }
 
     class Book

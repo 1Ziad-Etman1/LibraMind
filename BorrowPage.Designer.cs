@@ -39,9 +39,9 @@ namespace LibraMind
             this.label6 = new System.Windows.Forms.Label();
             this.StudentLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
-            this.PriceLabel = new System.Windows.Forms.Label();
+            this.ISBNLabel = new System.Windows.Forms.Label();
             this.ISBN = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.AvailableLable = new System.Windows.Forms.Label();
             this.BorrowBtn = new System.Windows.Forms.Label();
             this.Available = new System.Windows.Forms.Label();
             this.WrongBookNameErrorLabel = new System.Windows.Forms.Label();
@@ -51,6 +51,8 @@ namespace LibraMind
             this.BorrowLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.DashBoardPanel = new System.Windows.Forms.Panel();
+            this.IdInput = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.RightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,6 +105,7 @@ namespace LibraMind
             this.ReturnLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ReturnLabelBtn.TabIndex = 4;
             this.ReturnLabelBtn.Text = "Return";
+            this.ReturnLabelBtn.Click += new System.EventHandler(this.ReturnLabelBtn_Click);
             // 
             // BorrowLabelBtn
             // 
@@ -157,9 +160,11 @@ namespace LibraMind
             // RightPanel
             // 
             this.RightPanel.BackColor = System.Drawing.Color.Transparent;
-            this.RightPanel.Controls.Add(this.PriceLabel);
-            this.RightPanel.Controls.Add(this.ISBN);
+            this.RightPanel.Controls.Add(this.IdInput);
             this.RightPanel.Controls.Add(this.label2);
+            this.RightPanel.Controls.Add(this.ISBNLabel);
+            this.RightPanel.Controls.Add(this.ISBN);
+            this.RightPanel.Controls.Add(this.AvailableLable);
             this.RightPanel.Controls.Add(this.BorrowBtn);
             this.RightPanel.Controls.Add(this.Available);
             this.RightPanel.Controls.Add(this.WrongBookNameErrorLabel);
@@ -175,38 +180,37 @@ namespace LibraMind
             this.RightPanel.Size = new System.Drawing.Size(1005, 754);
             this.RightPanel.TabIndex = 5;
             // 
-            // PriceLabel
+            // ISBNLabel
             // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PriceLabel.Location = new System.Drawing.Point(193, 427);
-            this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(0, 36);
-            this.PriceLabel.TabIndex = 13;
-            this.PriceLabel.Visible = false;
+            this.ISBNLabel.AutoSize = true;
+            this.ISBNLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ISBNLabel.Location = new System.Drawing.Point(193, 468);
+            this.ISBNLabel.Name = "ISBNLabel";
+            this.ISBNLabel.Size = new System.Drawing.Size(0, 36);
+            this.ISBNLabel.TabIndex = 13;
             // 
             // ISBN
             // 
             this.ISBN.AutoSize = true;
             this.ISBN.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ISBN.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ISBN.Location = new System.Drawing.Point(49, 427);
+            this.ISBN.Location = new System.Drawing.Point(49, 468);
             this.ISBN.Name = "ISBN";
             this.ISBN.Size = new System.Drawing.Size(108, 36);
             this.ISBN.TabIndex = 12;
             this.ISBN.Text = "ISBN:";
             this.ISBN.Visible = false;
             // 
-            // label2
+            // AvailableLable
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(246, 321);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 36);
-            this.label2.TabIndex = 11;
+            this.AvailableLable.AutoSize = true;
+            this.AvailableLable.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AvailableLable.Location = new System.Drawing.Point(246, 362);
+            this.AvailableLable.Name = "AvailableLable";
+            this.AvailableLable.Size = new System.Drawing.Size(0, 36);
+            this.AvailableLable.TabIndex = 11;
             // 
             // BorrowBtn
             // 
@@ -219,13 +223,14 @@ namespace LibraMind
             this.BorrowBtn.Size = new System.Drawing.Size(158, 47);
             this.BorrowBtn.TabIndex = 10;
             this.BorrowBtn.Text = "Borrow";
+            this.BorrowBtn.Click += new System.EventHandler(this.BorrowBtn_Click);
             // 
             // Available
             // 
             this.Available.AutoSize = true;
             this.Available.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Available.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Available.Location = new System.Drawing.Point(49, 321);
+            this.Available.Location = new System.Drawing.Point(49, 362);
             this.Available.Name = "Available";
             this.Available.Size = new System.Drawing.Size(191, 36);
             this.Available.TabIndex = 9;
@@ -312,6 +317,26 @@ namespace LibraMind
             this.DashBoardPanel.Size = new System.Drawing.Size(339, 754);
             this.DashBoardPanel.TabIndex = 4;
             // 
+            // IdInput
+            // 
+            this.IdInput.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInput.Location = new System.Drawing.Point(412, 289);
+            this.IdInput.Name = "IdInput";
+            this.IdInput.Size = new System.Drawing.Size(307, 37);
+            this.IdInput.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(145, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 36);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Enter your ID: ";
+            // 
             // BorrowPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -354,8 +379,10 @@ namespace LibraMind
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label BorrowBtn;
         private System.Windows.Forms.Label Available;
-        private System.Windows.Forms.Label PriceLabel;
+        private System.Windows.Forms.Label ISBNLabel;
         private System.Windows.Forms.Label ISBN;
+        private System.Windows.Forms.Label AvailableLable;
+        private System.Windows.Forms.TextBox IdInput;
         private System.Windows.Forms.Label label2;
     }
 }

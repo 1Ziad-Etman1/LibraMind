@@ -16,5 +16,21 @@ namespace LibraMind
         {
             InitializeComponent();
         }
+
+        private void ProfileLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            AdminProfile Ap = new AdminProfile();
+            Ap.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void ManageBookLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ManageBookPage mp = new ManageBookPage();
+            mp.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
     }
 }

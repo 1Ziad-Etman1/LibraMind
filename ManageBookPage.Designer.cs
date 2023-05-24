@@ -77,6 +77,7 @@ namespace LibraMind
             this.EditProfileLabelBtn.Size = new System.Drawing.Size(190, 37);
             this.EditProfileLabelBtn.TabIndex = 8;
             this.EditProfileLabelBtn.Text = "Edit Profile";
+            this.EditProfileLabelBtn.Click += new System.EventHandler(this.EditProfileLabelBtn_Click);
             // 
             // label2
             // 
@@ -168,6 +169,7 @@ namespace LibraMind
             this.ViewRequistLabelBtn.Size = new System.Drawing.Size(235, 37);
             this.ViewRequistLabelBtn.TabIndex = 7;
             this.ViewRequistLabelBtn.Text = "View Requests";
+            this.ViewRequistLabelBtn.Click += new System.EventHandler(this.ViewRequistLabelBtn_Click);
             // 
             // DashBoardIcon
             // 
@@ -190,6 +192,7 @@ namespace LibraMind
             this.LogoutLabelBtn.Size = new System.Drawing.Size(130, 37);
             this.LogoutLabelBtn.TabIndex = 5;
             this.LogoutLabelBtn.Text = "Log out";
+            this.LogoutLabelBtn.Click += new System.EventHandler(this.LogoutLabelBtn_Click);
             // 
             // EditUserLabelBtn
             // 
@@ -202,6 +205,7 @@ namespace LibraMind
             this.EditUserLabelBtn.Size = new System.Drawing.Size(158, 37);
             this.EditUserLabelBtn.TabIndex = 4;
             this.EditUserLabelBtn.Text = "Edit User";
+            this.EditUserLabelBtn.Click += new System.EventHandler(this.EditUserLabelBtn_Click);
             // 
             // ManageBookLabelBtn
             // 
@@ -226,6 +230,7 @@ namespace LibraMind
             this.ProfileLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ProfileLabelBtn.TabIndex = 2;
             this.ProfileLabelBtn.Text = "Profile";
+            this.ProfileLabelBtn.Click += new System.EventHandler(this.ProfileLabelBtn_Click);
             // 
             // ProfessorLabel
             // 
@@ -393,7 +398,7 @@ namespace LibraMind
             this.DropBookLabelBtn.Font = new System.Drawing.Font("Harrington", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DropBookLabelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.DropBookLabelBtn.Image = ((System.Drawing.Image)(resources.GetObject("DropBookLabelBtn.Image")));
-            this.DropBookLabelBtn.Location = new System.Drawing.Point(108, 439);
+            this.DropBookLabelBtn.Location = new System.Drawing.Point(386, 458);
             this.DropBookLabelBtn.Name = "DropBookLabelBtn";
             this.DropBookLabelBtn.Size = new System.Drawing.Size(221, 47);
             this.DropBookLabelBtn.TabIndex = 9;
@@ -405,7 +410,7 @@ namespace LibraMind
             this.AddBookLabelBtn.Font = new System.Drawing.Font("Harrington", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBookLabelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.AddBookLabelBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBookLabelBtn.Image")));
-            this.AddBookLabelBtn.Location = new System.Drawing.Point(108, 190);
+            this.AddBookLabelBtn.Location = new System.Drawing.Point(386, 190);
             this.AddBookLabelBtn.Name = "AddBookLabelBtn";
             this.AddBookLabelBtn.Size = new System.Drawing.Size(205, 47);
             this.AddBookLabelBtn.TabIndex = 5;

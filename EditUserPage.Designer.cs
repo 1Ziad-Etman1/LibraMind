@@ -45,17 +45,17 @@ namespace LibraMind
             this.ManageBookLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
-            this.IdInput = new System.Windows.Forms.TextBox();
-            this.BookNameLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.OkBtn = new System.Windows.Forms.Label();
-            this.EmailInput = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PasswordInput = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdateBtn = new System.Windows.Forms.Label();
             this.PositionInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.UpdateBtn = new System.Windows.Forms.Label();
+            this.PasswordInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EmailInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.IdInput = new System.Windows.Forms.TextBox();
+            this.BookNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.DashBoardPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
@@ -143,6 +143,7 @@ namespace LibraMind
             this.ManageBookLabelBtn.Size = new System.Drawing.Size(220, 37);
             this.ManageBookLabelBtn.TabIndex = 3;
             this.ManageBookLabelBtn.Text = "Manage Book";
+            this.ManageBookLabelBtn.Click += new System.EventHandler(this.ManageBookLabelBtn_Click);
             // 
             // ProfileLabelBtn
             // 
@@ -155,6 +156,7 @@ namespace LibraMind
             this.ProfileLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ProfileLabelBtn.TabIndex = 2;
             this.ProfileLabelBtn.Text = "Profile";
+            this.ProfileLabelBtn.Click += new System.EventHandler(this.ProfileLabelBtn_Click);
             // 
             // ProfessorLabel
             // 
@@ -253,25 +255,16 @@ namespace LibraMind
             this.RightPanel.Size = new System.Drawing.Size(1005, 672);
             this.RightPanel.TabIndex = 9;
             // 
-            // IdInput
+            // OkBtn
             // 
-            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdInput.Location = new System.Drawing.Point(449, 192);
-            this.IdInput.Name = "IdInput";
-            this.IdInput.Size = new System.Drawing.Size(328, 37);
-            this.IdInput.TabIndex = 25;
-            this.IdInput.WordWrap = false;
-            // 
-            // BookNameLabel
-            // 
-            this.BookNameLabel.AutoSize = true;
-            this.BookNameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BookNameLabel.Location = new System.Drawing.Point(172, 193);
-            this.BookNameLabel.Name = "BookNameLabel";
-            this.BookNameLabel.Size = new System.Drawing.Size(271, 31);
-            this.BookNameLabel.TabIndex = 24;
-            this.BookNameLabel.Text = "Enter the User ID:";
+            this.OkBtn.AutoSize = true;
+            this.OkBtn.Font = new System.Drawing.Font("Harrington", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OkBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.OkBtn.Location = new System.Drawing.Point(795, 192);
+            this.OkBtn.Name = "OkBtn";
+            this.OkBtn.Size = new System.Drawing.Size(52, 32);
+            this.OkBtn.TabIndex = 27;
+            this.OkBtn.Text = "OK";
             // 
             // panel1
             // 
@@ -287,56 +280,17 @@ namespace LibraMind
             this.panel1.Size = new System.Drawing.Size(930, 390);
             this.panel1.TabIndex = 26;
             // 
-            // OkBtn
+            // UpdateBtn
             // 
-            this.OkBtn.AutoSize = true;
-            this.OkBtn.Font = new System.Drawing.Font("Harrington", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OkBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OkBtn.Location = new System.Drawing.Point(795, 192);
-            this.OkBtn.Name = "OkBtn";
-            this.OkBtn.Size = new System.Drawing.Size(52, 32);
-            this.OkBtn.TabIndex = 27;
-            this.OkBtn.Text = "OK";
-            // 
-            // EmailInput
-            // 
-            this.EmailInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailInput.Location = new System.Drawing.Point(398, 44);
-            this.EmailInput.Name = "EmailInput";
-            this.EmailInput.Size = new System.Drawing.Size(328, 37);
-            this.EmailInput.TabIndex = 27;
-            this.EmailInput.WordWrap = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(67, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 31);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Enter the User Email:";
-            // 
-            // PasswordInput
-            // 
-            this.PasswordInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordInput.Location = new System.Drawing.Point(398, 121);
-            this.PasswordInput.Name = "PasswordInput";
-            this.PasswordInput.Size = new System.Drawing.Size(328, 37);
-            this.PasswordInput.TabIndex = 29;
-            this.PasswordInput.WordWrap = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(17, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(366, 31);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Enter the User Password:";
+            this.UpdateBtn.AutoSize = true;
+            this.UpdateBtn.Font = new System.Drawing.Font("Harrington", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
+            this.UpdateBtn.Location = new System.Drawing.Point(406, 343);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(149, 47);
+            this.UpdateBtn.TabIndex = 32;
+            this.UpdateBtn.Text = "Update";
             // 
             // PositionInput
             // 
@@ -358,17 +312,65 @@ namespace LibraMind
             this.label4.TabIndex = 30;
             this.label4.Text = "Enter the User Position:";
             // 
-            // UpdateBtn
+            // PasswordInput
             // 
-            this.UpdateBtn.AutoSize = true;
-            this.UpdateBtn.Font = new System.Drawing.Font("Harrington", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(406, 343);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(149, 47);
-            this.UpdateBtn.TabIndex = 32;
-            this.UpdateBtn.Text = "Update";
+            this.PasswordInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordInput.Location = new System.Drawing.Point(398, 121);
+            this.PasswordInput.Name = "PasswordInput";
+            this.PasswordInput.Size = new System.Drawing.Size(328, 37);
+            this.PasswordInput.TabIndex = 29;
+            this.PasswordInput.WordWrap = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(17, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(366, 31);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Enter the User Password:";
+            // 
+            // EmailInput
+            // 
+            this.EmailInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailInput.Location = new System.Drawing.Point(398, 44);
+            this.EmailInput.Name = "EmailInput";
+            this.EmailInput.Size = new System.Drawing.Size(328, 37);
+            this.EmailInput.TabIndex = 27;
+            this.EmailInput.WordWrap = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(67, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 31);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Enter the User Email:";
+            // 
+            // IdInput
+            // 
+            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInput.Location = new System.Drawing.Point(449, 192);
+            this.IdInput.Name = "IdInput";
+            this.IdInput.Size = new System.Drawing.Size(328, 37);
+            this.IdInput.TabIndex = 25;
+            this.IdInput.WordWrap = false;
+            // 
+            // BookNameLabel
+            // 
+            this.BookNameLabel.AutoSize = true;
+            this.BookNameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BookNameLabel.Location = new System.Drawing.Point(172, 193);
+            this.BookNameLabel.Name = "BookNameLabel";
+            this.BookNameLabel.Size = new System.Drawing.Size(271, 31);
+            this.BookNameLabel.TabIndex = 24;
+            this.BookNameLabel.Text = "Enter the User ID:";
             // 
             // EditUserPage
             // 

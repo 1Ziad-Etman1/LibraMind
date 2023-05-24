@@ -42,7 +42,7 @@ namespace LibraMind
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.GoHomeButton);
             this.panel1.Controls.Add(this.LogoLabel);
             this.panel1.Controls.Add(this.LogoPic);
@@ -50,7 +50,7 @@ namespace LibraMind
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 675);
+            this.panel1.Size = new System.Drawing.Size(1294, 675);
             this.panel1.TabIndex = 1;
             // 
             // GoHomeButton
@@ -71,7 +71,7 @@ namespace LibraMind
             this.GoHomeButton.IdleFillColor = System.Drawing.Color.Transparent;
             this.GoHomeButton.IdleForecolor = System.Drawing.Color.White;
             this.GoHomeButton.IdleLineColor = System.Drawing.Color.Transparent;
-            this.GoHomeButton.Location = new System.Drawing.Point(175, 586);
+            this.GoHomeButton.Location = new System.Drawing.Point(395, 559);
             this.GoHomeButton.Margin = new System.Windows.Forms.Padding(9);
             this.GoHomeButton.Name = "GoHomeButton";
             this.GoHomeButton.Size = new System.Drawing.Size(506, 71);
@@ -85,7 +85,7 @@ namespace LibraMind
             this.LogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.LogoLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LogoLabel.Location = new System.Drawing.Point(183, 443);
+            this.LogoLabel.Location = new System.Drawing.Point(412, 430);
             this.LogoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogoLabel.Name = "LogoLabel";
             this.LogoLabel.Size = new System.Drawing.Size(479, 94);
@@ -97,7 +97,7 @@ namespace LibraMind
             // 
             this.LogoPic.BackColor = System.Drawing.Color.Transparent;
             this.LogoPic.Image = ((System.Drawing.Image)(resources.GetObject("LogoPic.Image")));
-            this.LogoPic.Location = new System.Drawing.Point(339, 223);
+            this.LogoPic.Location = new System.Drawing.Point(573, 189);
             this.LogoPic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LogoPic.Name = "LogoPic";
             this.LogoPic.Size = new System.Drawing.Size(164, 152);
@@ -109,7 +109,7 @@ namespace LibraMind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 675);
+            this.ClientSize = new System.Drawing.Size(1294, 675);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

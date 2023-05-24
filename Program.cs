@@ -19,4 +19,19 @@ namespace LibraMind
             Application.Run(new FirstPageForm());
         }
     }
+
+    class User
+    {
+        public string name { set; get; }
+        public string password { set; get; }
+        public string Email { set; get; }
+        public string pos { set; get; }
+    }
+
+    class Book
+    {
+        public string name { set; get; }
+        public string ISBN { set; get; }
+        public string nCopies { set; get; }
+    }
 }

@@ -1,5 +1,4 @@
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.FirstPageForm.resources
-D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Form2.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.LoginForm.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.SecondPageForm.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.SignUpForm.resources
@@ -46,3 +45,10 @@ D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.Fody.Copy
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.CopyComplete
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.exe
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.pdb
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.AdminProfile.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.BorrowPage.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHall.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Profile.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Page1.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Page2.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.AssemblyReference.cache

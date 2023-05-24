@@ -274,9 +274,7 @@
     <Compile Include="ManageBookPage.Designer.cs">
       <DependentUpon>ManageBookPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page2.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Page2.cs" />
     <Compile Include="Page2.Designer.cs">
       <DependentUpon>Page2.cs</DependentUpon>
     </Compile>
@@ -304,9 +302,7 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page1.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Page1.cs" />
     <Compile Include="Page1.Designer.cs">
       <DependentUpon>Page1.cs</DependentUpon>
     </Compile>

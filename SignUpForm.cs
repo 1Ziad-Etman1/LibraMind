@@ -87,8 +87,8 @@ namespace LibraMind
             else
             {
                 string Uname = UsernameInput.Text;
-                string Pass  = PasswordInput.Text;
                 string CPass = ConfirmPasswordInput.Text;
+                string Pass  = PasswordInput.Text;
                 string Email = EmailInput.Text;
 
                 SqlConnection con = new SqlConnection(conString);

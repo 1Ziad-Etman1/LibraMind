@@ -32,5 +32,18 @@ namespace LibraMind
             mp.ShowDialog(); // Show the other form as a modal dialog
             this.Close(); // Close the current form
         }
+
+        private void OkBtn_Click(object sender, EventArgs e)
+        {
+            if (IdInput.TextLength != 0)
+            {
+                string id = IdInput.Text;
+
+                IdLabel.Visible = false;
+                IdInput.Visible = false;
+                OkBtn.Visible = false;
+                UpdatePanel.Visible = true;
+            }
+        }
     }
 }

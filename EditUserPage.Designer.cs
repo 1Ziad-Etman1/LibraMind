@@ -46,7 +46,7 @@ namespace LibraMind
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
             this.OkBtn = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdatePanel = new System.Windows.Forms.Panel();
             this.UpdateBtn = new System.Windows.Forms.Label();
             this.PositionInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,11 +55,11 @@ namespace LibraMind
             this.EmailInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IdInput = new System.Windows.Forms.TextBox();
-            this.BookNameLabel = new System.Windows.Forms.Label();
+            this.IdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.DashBoardPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.UpdatePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // EditProfileLabelBtn
@@ -243,9 +243,9 @@ namespace LibraMind
             this.RightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RightPanel.BackgroundImage")));
             this.RightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RightPanel.Controls.Add(this.OkBtn);
-            this.RightPanel.Controls.Add(this.panel1);
+            this.RightPanel.Controls.Add(this.UpdatePanel);
             this.RightPanel.Controls.Add(this.IdInput);
-            this.RightPanel.Controls.Add(this.BookNameLabel);
+            this.RightPanel.Controls.Add(this.IdLabel);
             this.RightPanel.Controls.Add(this.label2);
             this.RightPanel.Controls.Add(this.ManageBookLabel);
             this.RightPanel.Controls.Add(this.UsernameLabel);
@@ -265,20 +265,21 @@ namespace LibraMind
             this.OkBtn.Size = new System.Drawing.Size(52, 32);
             this.OkBtn.TabIndex = 27;
             this.OkBtn.Text = "OK";
+            this.OkBtn.Click += new System.EventHandler(this.OkBtn_Click);
             // 
-            // panel1
+            // UpdatePanel
             // 
-            this.panel1.Controls.Add(this.UpdateBtn);
-            this.panel1.Controls.Add(this.PositionInput);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.PasswordInput);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.EmailInput);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(51, 235);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 390);
-            this.panel1.TabIndex = 26;
+            this.UpdatePanel.Controls.Add(this.UpdateBtn);
+            this.UpdatePanel.Controls.Add(this.PositionInput);
+            this.UpdatePanel.Controls.Add(this.label4);
+            this.UpdatePanel.Controls.Add(this.PasswordInput);
+            this.UpdatePanel.Controls.Add(this.label3);
+            this.UpdatePanel.Controls.Add(this.EmailInput);
+            this.UpdatePanel.Controls.Add(this.label1);
+            this.UpdatePanel.Location = new System.Drawing.Point(51, 235);
+            this.UpdatePanel.Name = "UpdatePanel";
+            this.UpdatePanel.Size = new System.Drawing.Size(930, 390);
+            this.UpdatePanel.TabIndex = 26;
             // 
             // UpdateBtn
             // 
@@ -361,16 +362,16 @@ namespace LibraMind
             this.IdInput.TabIndex = 25;
             this.IdInput.WordWrap = false;
             // 
-            // BookNameLabel
+            // IdLabel
             // 
-            this.BookNameLabel.AutoSize = true;
-            this.BookNameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BookNameLabel.Location = new System.Drawing.Point(172, 193);
-            this.BookNameLabel.Name = "BookNameLabel";
-            this.BookNameLabel.Size = new System.Drawing.Size(271, 31);
-            this.BookNameLabel.TabIndex = 24;
-            this.BookNameLabel.Text = "Enter the User ID:";
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IdLabel.Location = new System.Drawing.Point(172, 193);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(271, 31);
+            this.IdLabel.TabIndex = 24;
+            this.IdLabel.Text = "Enter the User ID:";
             // 
             // EditUserPage
             // 
@@ -388,8 +389,8 @@ namespace LibraMind
             this.DashBoardPanel.PerformLayout();
             this.RightPanel.ResumeLayout(false);
             this.RightPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.UpdatePanel.ResumeLayout(false);
+            this.UpdatePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,9 +412,9 @@ namespace LibraMind
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Panel RightPanel;
         private System.Windows.Forms.TextBox IdInput;
-        private System.Windows.Forms.Label BookNameLabel;
+        private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Label OkBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel UpdatePanel;
         private System.Windows.Forms.Label UpdateBtn;
         private System.Windows.Forms.TextBox PositionInput;
         private System.Windows.Forms.Label label4;

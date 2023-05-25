@@ -99,13 +99,8 @@ namespace LibraMind
                         " VALUES (77, @Param1, 'FCAI', 0.0, @Param2, @Param3, 'Egyption', 'Student')";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
                     command.Parameters.AddWithValue("@param1", Uname);
-                    //command.Parameters.AddWithValue("@param2", " ");
-                    //command.Parameters.AddWithValue("@param3", 0.0);
                     command.Parameters.AddWithValue("@param2", Email);
                     command.Parameters.AddWithValue("@param3", Pass);
-                    //command.Parameters.AddWithValue("@param5", "Egyption");
-                    //command.Parameters.AddWithValue("@param6", "Student");
-
                     command.ExecuteNonQuery();
 
                     con.Close();

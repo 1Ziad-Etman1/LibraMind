@@ -24,9 +24,9 @@ namespace LibraMind
             //Application.Run(new LoginForm());
             //Application.Run(new GreatHallStudent());
             //Application.Run(new Profile());
-            Application.Run(new BorrowPage());
+            //Application.Run(new BorrowPage());
             //Application.Run(new ReturnPage());
-            //Application.Run(new GreatHallAdmin());
+            Application.Run(new GreatHallAdmin());
             //Application.Run(new AdminProfile());
             //Application.Run(new ManageBookPage());
             //Application.Run(new EditUserPage());

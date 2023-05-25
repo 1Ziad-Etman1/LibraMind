@@ -37,6 +37,9 @@ namespace LibraMind
 
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
+            Error.Visible = false;
+            Fine.Visible = false;
+            FineLabel.Visible = false;
             SqlConnection con = new SqlConnection(conString);
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
@@ -46,21 +49,29 @@ namespace LibraMind
                 SqlCommand command = new SqlCommand(query, con);
                 command.Parameters.AddWithValue("@Param1", ISBNInput.Text);
                 SqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                bool Avaliable = reader.GetBoolean(0);
-                reader.Close();
-                con.Close();
-                if (Avaliable == false)
+                if(reader.HasRows == true)
                 {
-                    Error.Visible = true;
+                    reader.Read();
+                    bool Avaliable = reader.GetBoolean(0);
+                    reader.Close();
+                    con.Close();
+                    if (Avaliable == false)
+                    {
+                        Error.Visible = true;
+                    }
+                    else
+                    {
+                        Fine.Visible = true;
+                        FineLabel.Visible = true;
+                        FineLabel.Text = "0.0";
+
+                    }
                 }
                 else
                 {
-                    Fine.Visible = true;
-                    FineLabel.Visible = true;
-                    FineLabel.Text = "0.0";
-
+                    Error.Visible = true;
                 }
+                
             }
         }
 

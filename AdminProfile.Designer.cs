@@ -78,9 +78,9 @@ namespace LibraMind
             // ProfilePic
             // 
             this.ProfilePic.Image = ((System.Drawing.Image)(resources.GetObject("ProfilePic.Image")));
-            this.ProfilePic.Location = new System.Drawing.Point(27, 62);
+            this.ProfilePic.Location = new System.Drawing.Point(27, 85);
             this.ProfilePic.Name = "ProfilePic";
-            this.ProfilePic.Size = new System.Drawing.Size(267, 275);
+            this.ProfilePic.Size = new System.Drawing.Size(267, 252);
             this.ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProfilePic.TabIndex = 2;
             this.ProfilePic.TabStop = false;
@@ -250,7 +250,7 @@ namespace LibraMind
             this.panel1.Controls.Add(this.ProfileLabel);
             this.panel1.Controls.Add(this.ProfilePic);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(342, 0);
+            this.panel1.Location = new System.Drawing.Point(340, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 738);
             this.panel1.TabIndex = 5;
@@ -260,7 +260,7 @@ namespace LibraMind
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.UsernameLabel.Location = new System.Drawing.Point(93, 354);
+            this.UsernameLabel.Location = new System.Drawing.Point(55, 350);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
             this.UsernameLabel.TabIndex = 43;
@@ -422,7 +422,7 @@ namespace LibraMind
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1347, 738);
+            this.ClientSize = new System.Drawing.Size(1345, 738);
             this.Controls.Add(this.DashBoardPanel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

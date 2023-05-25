@@ -240,7 +240,7 @@ namespace LibraMind
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.UsernameLabel.Location = new System.Drawing.Point(83, 364);
+            this.UsernameLabel.Location = new System.Drawing.Point(38, 350);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
             this.UsernameLabel.TabIndex = 3;

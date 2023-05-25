@@ -176,7 +176,7 @@ namespace LibraMind
             this.RightPanel.Controls.Add(this.UsernameLabel);
             this.RightPanel.Controls.Add(this.label6);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightPanel.Location = new System.Drawing.Point(343, 0);
+            this.RightPanel.Location = new System.Drawing.Point(339, 0);
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(1005, 754);
             this.RightPanel.TabIndex = 5;
@@ -345,7 +345,7 @@ namespace LibraMind
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1348, 754);
+            this.ClientSize = new System.Drawing.Size(1344, 754);
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.DashBoardPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

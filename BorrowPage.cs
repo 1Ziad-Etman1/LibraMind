@@ -43,8 +43,13 @@ namespace LibraMind
 
         private void BorrowBtn_Click(object sender, EventArgs e)
         {
+            AvailableLable.Text = "";
+            Available.Visible = false;
+            ISBN.Visible = false;
+            ISBNLabel.Text = "";
             if (BookNameInput.TextLength != 0 && IdInput.TextLength != 0)
             {
+                Available.Visible = true;
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
@@ -58,26 +63,49 @@ namespace LibraMind
                     {
                         reader.Read();
                         string isbn = reader.GetString(0);
-                        bool Avaliable = reader.GetBoolean(1);
+                        bool Avaliablee = reader.GetBoolean(1);
                         reader.Close();
                         con.Close();
-                        if(Avaliable == true)
+                        if(Avaliablee == true)
                         {
+                            AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
                             Available.Visible = true;
+                            AvailableLable.Visible = true;
                             AvailableLable.Text = "Yes";
                             ISBN.Visible = true;
                             ISBNLabel.Text = Convert.ToString(isbn);
+                            con.Open();
+                            string query2 = "INSERT INTO BORROWING (BORROW_ID, U__ID, ISBN__B) VALUES (44, @Param2, @Param3)";
+                            SqlCommand command2 = new SqlCommand(query2, con);
+                            command2.Parameters.AddWithValue("@Param2", IdInput.Text);
+                            command2.Parameters.AddWithValue("@Param3", isbn);
+                            command2.ExecuteNonQuery();
+                            con.Close();
+
+                            con.Open();
+                            string query3 = "INSERT INTO BORROW (USER_ID, BORROW_ID, BORROW_DATE, RETURN_DATE) VALUES (@Param4, 44, '2023-05-25 18:00:00.000', '2023-05-25 18:00:00.000')";
+                            SqlCommand command3 = new SqlCommand(query3, con);
+                            command3.Parameters.AddWithValue("@Param4", IdInput.Text);
+                            command3.ExecuteNonQuery();
+
+
+                            con.Close();
                         }
                         else
                         {
+
                             Available.Visible = true;
+                            AvailableLable.Visible = true;
                             AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
                             AvailableLable.Text = "No";
                         }
                     }
                     else
                     {
-
+                        Available.Visible = true;
+                        AvailableLable.Visible = true;
+                        AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+                        AvailableLable.Text = "No";
                     }
                 }
             }

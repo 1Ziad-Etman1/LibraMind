@@ -18,7 +18,7 @@ namespace LibraMind
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FirstPageForm()); 
+            Application.Run(new FirstPageForm()); 
             //Application.Run(new SecondPageForm());
             //Application.Run(new SignUpForm());
             //Application.Run(new LoginForm());
@@ -30,7 +30,7 @@ namespace LibraMind
             //Application.Run(new AdminProfile());
             //Application.Run(new ManageBookPage());
             //Application.Run(new EditUserPage());
-            Application.Run(new EditProfilePage());
+            //Application.Run(new EditProfilePage());
             //Application.Run(new ViewRequests());
             //Application.Run(new Statistics());
         }

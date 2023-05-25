@@ -81,7 +81,7 @@ namespace LibraMind
             this.panel1.Controls.Add(this.ProfilePic);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(345, 0);
+            this.panel1.Location = new System.Drawing.Point(355, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 760);
             this.panel1.TabIndex = 3;
@@ -379,12 +379,12 @@ namespace LibraMind
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1350, 760);
+            this.ClientSize = new System.Drawing.Size(1360, 760);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DashBoardPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Profile";
-            this.Text = "LibraMind";
+            this.Text = "s";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).EndInit();

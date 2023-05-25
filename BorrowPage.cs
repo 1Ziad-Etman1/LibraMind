@@ -75,7 +75,7 @@ namespace LibraMind
                             ISBN.Visible = true;
                             ISBNLabel.Text = Convert.ToString(isbn);
                             con.Open();
-                            string query2 = "INSERT INTO BORROWING (BORROW_ID, U__ID, ISBN__B) VALUES (55, @Param2, @Param3)";
+                            string query2 = "INSERT INTO BORROWING (BORROW_ID, U__ID, ISBN__B) VALUES (66, @Param2, @Param3)";
                             SqlCommand command2 = new SqlCommand(query2, con);
                             command2.Parameters.AddWithValue("@Param2", IdInput.Text);
                             command2.Parameters.AddWithValue("@Param3", isbn);
@@ -83,7 +83,7 @@ namespace LibraMind
                             con.Close();
 
                             con.Open();
-                            string query3 = "INSERT INTO BORROW (USER_ID, BORROW_ID, BORROW_DATE, RETURN_DATE) VALUES (@Param4, 55, '2023-05-25 18:00:00.000', '2023-05-25 18:00:00.000')";
+                            string query3 = "INSERT INTO BORROW (USER_ID, BORROW_ID, BORROW_DATE, RETURN_DATE) VALUES (@Param4, 66, '2023-05-25 18:00:00.000', '2023-05-25 18:00:00.000')";
                             SqlCommand command3 = new SqlCommand(query3, con);
                             command3.Parameters.AddWithValue("@Param4", IdInput.Text);
                             command3.ExecuteNonQuery();

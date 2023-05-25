@@ -96,7 +96,7 @@ namespace LibraMind
                 if (con.State == System.Data.ConnectionState.Open)
                 {
                     string sqlCommand = "INSERT INTO [USER] (USER_ID, F_NAME, L_NAME, TOTAL_FINE, EMAIL, PASSWORD, NATIONALITY, POSITION)" +
-                        " VALUES (77, @Param1, 'FCAI', 0.0, @Param2, @Param3, 'Egyption', 'Student')";
+                        " VALUES (88, @Param1, 'FCAI', 0.0, @Param2, @Param3, 'Egyption', 'Student')";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
                     command.Parameters.AddWithValue("@param1", Uname);
                     command.Parameters.AddWithValue("@param2", Email);

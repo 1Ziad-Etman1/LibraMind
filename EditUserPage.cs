@@ -79,7 +79,9 @@ namespace LibraMind
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+
             string id = IdInput.Text;
+
             if (EmailInput.TextLength > 0 && PasswordInput.TextLength > 0)
             {
                 string Pass = PasswordInput.Text;
@@ -90,7 +92,7 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 AND position = @Param3 WHERE USER_ID = @Param4";
+                    string sqlCommand = "UPDATE [USER] SET EMAIL=@Param1, PASSWORD=@Param2, POSITION=@Param3 WHERE USER_ID=@Param4";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
 
                     command.Parameters.AddWithValue("@param1", Email);
@@ -103,7 +105,7 @@ namespace LibraMind
                     con.Close();
                     EmailInput.Text = "";
                     PasswordInput.Text = "";
-
+                    PositionInput.Text = "";
                 }
             }
         }

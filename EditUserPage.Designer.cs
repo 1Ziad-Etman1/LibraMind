@@ -284,6 +284,7 @@ namespace LibraMind
             this.UpdatePanel.Name = "UpdatePanel";
             this.UpdatePanel.Size = new System.Drawing.Size(930, 390);
             this.UpdatePanel.TabIndex = 26;
+            this.UpdatePanel.Visible = false;
             // 
             // UpdateBtn
             // 

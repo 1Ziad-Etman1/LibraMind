@@ -6,8 +6,10 @@ using System.Windows.Forms;
 
 namespace LibraMind
 {
+    
     static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +18,21 @@ namespace LibraMind
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FirstPageForm());
+            //Application.Run(new FirstPageForm()); 
+            //Application.Run(new SecondPageForm());
+            //Application.Run(new SignUpForm());
+            //Application.Run(new LoginForm());
+            //Application.Run(new GreatHallStudent());
+            //Application.Run(new Profile());
+            Application.Run(new BorrowPage());
+            //Application.Run(new ReturnPage());
+            //Application.Run(new GreatHallAdmin());
+            //Application.Run(new AdminProfile());
+            //Application.Run(new ManageBookPage());
+            //Application.Run(new EditUserPage());
+            //Application.Run(new EditProfilePage());
+            //Application.Run(new ViewRequests());
+            //Application.Run(new Statistics());
         }
     }
 

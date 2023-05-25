@@ -114,7 +114,7 @@ namespace LibraMind
             this.PasswordErrorLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.PasswordErrorLabel.Location = new System.Drawing.Point(148, 430);
+            this.PasswordErrorLabel.Location = new System.Drawing.Point(146, 434);
             this.PasswordErrorLabel.Name = "PasswordErrorLabel";
             this.PasswordErrorLabel.Size = new System.Drawing.Size(26, 27);
             this.PasswordErrorLabel.TabIndex = 16;
@@ -126,7 +126,7 @@ namespace LibraMind
             this.EmailErrorLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.EmailErrorLabel.Location = new System.Drawing.Point(148, 275);
+            this.EmailErrorLabel.Location = new System.Drawing.Point(135, 279);
             this.EmailErrorLabel.Name = "EmailErrorLabel";
             this.EmailErrorLabel.Size = new System.Drawing.Size(26, 27);
             this.EmailErrorLabel.TabIndex = 15;

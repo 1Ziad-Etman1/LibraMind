@@ -54,23 +54,30 @@ namespace LibraMind
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", bname);
                     SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    int isbn = reader.GetInt32(0);
-                    int Avaliable = reader.GetInt32(1);
-                    reader.Close();
-                    con.Close();
-                    if(Avaliable == 1)
+                    if (reader.HasRows)
                     {
-                        Available.Visible = true;
-                        AvailableLable.Text = "Yes";
-                        ISBN.Visible = true;
-                        ISBNLabel.Text = Convert.ToString(isbn);
+                        reader.Read();
+                        string isbn = reader.GetString(0);
+                        bool Avaliable = reader.GetBoolean(1);
+                        reader.Close();
+                        con.Close();
+                        if(Avaliable == true)
+                        {
+                            Available.Visible = true;
+                            AvailableLable.Text = "Yes";
+                            ISBN.Visible = true;
+                            ISBNLabel.Text = Convert.ToString(isbn);
+                        }
+                        else
+                        {
+                            Available.Visible = true;
+                            AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+                            AvailableLable.Text = "No";
+                        }
                     }
                     else
                     {
-                        Available.Visible = true;
-                        AvailableLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-                        AvailableLable.Text = "No";
+
                     }
                 }
             }

@@ -26,6 +26,8 @@ namespace LibraMind
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            EmailErrorLabel.Text = "";
+            PasswordErrorLabel.Text = "";
             if (EmailInput.TextLength == 0 || PasswordInput.TextLength == 0)
             {
                 if (EmailInput.TextLength == 0)
@@ -47,6 +49,7 @@ namespace LibraMind
             }
             else
             {
+                
                 string Email = EmailInput.Text;
                 string Pass = PasswordInput.Text;
 
@@ -58,33 +61,44 @@ namespace LibraMind
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", Email);
                     SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    string Email1Value = reader.GetString(0);
-                    string PassValue = reader.GetString(1);
-                    string Position = reader.GetString(2);
-                    reader.Close();
-                    con.Close();
-                    //alicejohnson@example.com
-                    //password3
-                    if (Pass == PassValue)
-                    {
-                        //EmailErrorLabel.ForeColor = PasswordErrorLabel.ForeColor =System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); ;
-                        //EmailErrorLabel.Text = PasswordErrorLabel.Text = "Confirmed!!!!!!";
-                        if(Position == "Staff")
+                    if (reader.HasRows)
+                    { 
+                        reader.Read();
+                        string Email1Value = reader.GetString(0);
+                        string PassValue = reader.GetString(1);
+                        string Position = reader.GetString(2);
+                        reader.Close();
+                        con.Close();
+                        //alicejohnson@example.com
+                        //password3
+                        if (Pass == PassValue)
                         {
-                            this.Hide(); // Hide the current form
-                            GreatHallAdmin gha = new GreatHallAdmin();
-                            gha.ShowDialog(); // Show the other form as a modal dialog
-                            this.Close(); // Close the current form
+                            //EmailErrorLabel.ForeColor = PasswordErrorLabel.ForeColor =System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); ;
+                            //EmailErrorLabel.Text = PasswordErrorLabel.Text = "Confirmed!!!!!!";
+                            if(Position == "Staff")
+                            {
+                                this.Hide(); // Hide the current form
+                                GreatHallAdmin gha = new GreatHallAdmin();
+                                gha.ShowDialog(); // Show the other form as a modal dialog
+                                this.Close(); // Close the current form
+                            }
+                            else
+                            {
+                                this.Hide(); // Hide the current form
+                                GreatHallStudent ghs = new GreatHallStudent();
+                                ghs.ShowDialog(); // Show the other form as a modal dialog
+                                this.Close(); // Close the current form
+                            }
                         }
                         else
                         {
-                            this.Hide(); // Hide the current form
-                            GreatHallStudent ghs = new GreatHallStudent();
-                            ghs.ShowDialog(); // Show the other form as a modal dialog
-                            this.Close(); // Close the current form
+                            PasswordErrorLabel.Text = "Wrong Password!";
                         }
-                    }                    
+                    }
+                    else
+                    {
+                        EmailErrorLabel.Text = "Invalid Credentials!";
+                    }
                 }             
             }
         }

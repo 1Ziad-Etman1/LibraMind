@@ -25,6 +25,36 @@ namespace LibraMind
             FPage.ShowDialog(); // Show the other form as a modal dialog
             this.Close(); // Close the current form
         }
+        public string conString = "Data Source=KINGAL;Initial Catalog=LIBRARY;Integrated Security=True";
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            string id = IdInput.Text;
+            if (EmailInput.TextLength > 0 && PasswordInput.TextLength > 0)
+            {
+                string Pass = PasswordInput.Text;
+                string Email = EmailInput.Text;
+
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE USER_ID = @Param3";
+                    SqlCommand command = new SqlCommand(sqlCommand, con);
+
+                    command.Parameters.AddWithValue("@param1", Email);
+                    command.Parameters.AddWithValue("@param2", Pass);
+                    command.Parameters.AddWithValue("@param3", id);
+
+                    command.ExecuteNonQuery();
+
+                    con.Close();
+                    EmailInput.Text = "";
+                    PasswordInput.Text = "";
+
+                }
+            }
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -127,36 +157,7 @@ namespace LibraMind
         {
 
         }
-        public string conString = "Data Source=KINGAL;Initial Catalog=LIBRARY;Integrated Security=True";
-
-        private void UpdateBtn_Click(object sender, EventArgs e)
-        {
-            string id = IdInput.Text;
-            if (EmailInput.TextLength > 0 && PasswordInput.TextLength > 0)
-            {
-                string Pass = PasswordInput.Text;
-                string Email = EmailInput.Text;
-
-                SqlConnection con = new SqlConnection(conString);
-                con.Open();
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE USER_ID = @Param3";
-                    SqlCommand command = new SqlCommand(sqlCommand, con);
-
-                    command.Parameters.AddWithValue("@param1", Email);
-                    command.Parameters.AddWithValue("@param2", Pass);
-                    command.Parameters.AddWithValue("@param3", id);
-
-                    command.ExecuteNonQuery();
-
-                    con.Close();
-                    EmailInput.Text = "";
-                    PasswordInput.Text = "";
-
-                }
-            }
-        }
+  
 
         private void OkBtn_Click(object sender, EventArgs e)
         {

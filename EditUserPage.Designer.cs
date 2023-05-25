@@ -296,6 +296,7 @@ namespace LibraMind
             this.UpdateBtn.Size = new System.Drawing.Size(149, 47);
             this.UpdateBtn.TabIndex = 32;
             this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // PositionInput
             // 
@@ -305,6 +306,7 @@ namespace LibraMind
             this.PositionInput.Size = new System.Drawing.Size(328, 37);
             this.PositionInput.TabIndex = 31;
             this.PositionInput.WordWrap = false;
+            this.PositionInput.TextChanged += new System.EventHandler(this.PositionInput_TextChanged);
             // 
             // label4
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LibraMind
 {
@@ -71,6 +72,43 @@ namespace LibraMind
         }
 
         private void EditUserLabelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        public string conString = "Data Source=KINGAL;Initial Catalog=LIBRARY;Integrated Security=True";
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            string id = IdInput.Text;
+            if (EmailInput.TextLength > 0 && PasswordInput.TextLength > 0)
+            {
+                string Pass = PasswordInput.Text;
+                string Email = EmailInput.Text;
+                string position = PositionInput.Text;
+
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 AND position = @Param3 WHERE USER_ID = @Param4";
+                    SqlCommand command = new SqlCommand(sqlCommand, con);
+
+                    command.Parameters.AddWithValue("@param1", Email);
+                    command.Parameters.AddWithValue("@param2", Pass);
+                    command.Parameters.AddWithValue("@param3", position);
+                    command.Parameters.AddWithValue("@param4", id);
+
+                    command.ExecuteNonQuery();
+
+                    con.Close();
+                    EmailInput.Text = "";
+                    PasswordInput.Text = "";
+
+                }
+            }
+        }
+
+        private void PositionInput_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -56,5 +56,13 @@ namespace LibraMind
             eu.ShowDialog(); // Show the other form as a modal dialog
             this.Close(); // Close the current form
         }
+
+        private void StatisticsLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            Statistics s = new Statistics();
+            s.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
     }
 }

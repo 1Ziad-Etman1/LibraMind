@@ -176,7 +176,7 @@ namespace LibraMind
             this.RightPanel.Controls.Add(this.UsernameLabel);
             this.RightPanel.Controls.Add(this.label6);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightPanel.Location = new System.Drawing.Point(357, 0);
+            this.RightPanel.Location = new System.Drawing.Point(377, 0);
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(1005, 754);
             this.RightPanel.TabIndex = 5;
@@ -336,7 +336,7 @@ namespace LibraMind
             this.DashBoardPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.DashBoardPanel.Location = new System.Drawing.Point(0, 0);
             this.DashBoardPanel.Name = "DashBoardPanel";
-            this.DashBoardPanel.Size = new System.Drawing.Size(339, 754);
+            this.DashBoardPanel.Size = new System.Drawing.Size(350, 754);
             this.DashBoardPanel.TabIndex = 4;
             // 
             // BorrowPage
@@ -345,7 +345,7 @@ namespace LibraMind
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 754);
+            this.ClientSize = new System.Drawing.Size(1382, 754);
             this.Controls.Add(this.RightPanel);
             this.Controls.Add(this.DashBoardPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

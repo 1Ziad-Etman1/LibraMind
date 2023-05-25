@@ -41,6 +41,7 @@ namespace LibraMind
         {
             if (IdInput.TextLength != 0)
             {
+                ErrorLabel.Visible = false;
                 string id = IdInput.Text;
 
 
@@ -52,33 +53,42 @@ namespace LibraMind
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", id);
                     SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    string Uname = reader.GetString(0);
-                    string EmailValue = reader.GetString(1);
-                    string PassValue = reader.GetString(2);
-                    string nationality = reader.GetString(3);
-                    string position = reader.GetString(4);
-                    reader.Close();
-                    con.Close();
-                    IdLabel.Visible = false;
-                    IdInput.Visible = false;
-                    OkBtn.Visible   = false;
-                    UsernameLabel.Visible = true;
-                    UsernameLabel.Text = Uname;
-                    Email.Visible = true;
-                    EmailLabel.Visible = true; 
-                    EmailLabel.Text = EmailValue;
-                    Password.Visible = true;
-                    PasswordLabel.Visible = true;
-                    PasswordLabel.Text = PassValue;
-                    Position.Visible = true;
-                    PositionLabel.Visible = true;
-                    PositionLabel.Text = position;
-                    Nationallity.Visible = true;
-                    NationalityLabel.Visible = true;
-                    NationalityLabel.Text = nationality;
-                    ErrorLabel.Visible = false;
-                    ProfilePic.Visible = true;
+                    if(reader.HasRows == true)
+                    {
+                        reader.Read();
+                        string Uname = reader.GetString(0);
+                        string EmailValue = reader.GetString(1);
+                        string PassValue = reader.GetString(2);
+                        string nationality = reader.GetString(3);
+                        string position = reader.GetString(4);
+                        reader.Close();
+                        con.Close();
+                        IdLabel.Visible = false;
+                        IdInput.Visible = false;
+                        OkBtn.Visible   = false;
+                        UsernameLabel.Visible = true;
+                        UsernameLabel.Text = Uname;
+                        Email.Visible = true;
+                        EmailLabel.Visible = true; 
+                        EmailLabel.Text = EmailValue;
+                        Password.Visible = true;
+                        PasswordLabel.Visible = true;
+                        PasswordLabel.Text = PassValue;
+                        Position.Visible = true;
+                        PositionLabel.Visible = true;
+                        PositionLabel.Text = position;
+                        Nationallity.Visible = true;
+                        NationalityLabel.Visible = true;
+                        NationalityLabel.Text = nationality;
+                        ErrorLabel.Visible = false;
+                        ProfilePic.Visible = true;
+
+                    }
+                    else
+                    {
+                        ErrorLabel.Visible = true;
+                        ErrorLabel.Text = "Wrong ID!";
+                    }
                 }
             }
             else

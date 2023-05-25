@@ -56,3 +56,4 @@ D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHallStudent
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ReturnPage.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ViewRequests.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.AssemblyReference.cache
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Statistics.resources

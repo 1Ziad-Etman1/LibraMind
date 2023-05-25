@@ -26,11 +26,11 @@ namespace LibraMind
             //Application.Run(new Profile());
             //Application.Run(new BorrowPage());
             //Application.Run(new ReturnPage());
-            Application.Run(new GreatHallAdmin());
+            //Application.Run(new GreatHallAdmin());
             //Application.Run(new AdminProfile());
             //Application.Run(new ManageBookPage());
             //Application.Run(new EditUserPage());
-            //Application.Run(new EditProfilePage());
+            Application.Run(new EditProfilePage());
             //Application.Run(new ViewRequests());
             //Application.Run(new Statistics());
         }

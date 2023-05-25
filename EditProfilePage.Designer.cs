@@ -264,11 +264,10 @@ namespace LibraMind
             this.RightPanel.Controls.Add(this.EditProfileLabel);
             this.RightPanel.Controls.Add(this.UsernameLabel);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightPanel.Location = new System.Drawing.Point(343, 0);
+            this.RightPanel.Location = new System.Drawing.Point(345, 0);
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(1005, 673);
             this.RightPanel.TabIndex = 11;
-            this.RightPanel.Visible = false;
             this.RightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightPanel_Paint);
             // 
             // ErrorLabel
@@ -281,6 +280,7 @@ namespace LibraMind
             this.ErrorLabel.Size = new System.Drawing.Size(188, 37);
             this.ErrorLabel.TabIndex = 44;
             this.ErrorLabel.Text = "Required!";
+            this.ErrorLabel.Visible = false;
             // 
             // OkBtn
             // 
@@ -350,6 +350,7 @@ namespace LibraMind
             this.PasswordLabel.Size = new System.Drawing.Size(366, 31);
             this.PasswordLabel.TabIndex = 32;
             this.PasswordLabel.Text = "Enter the User Password:";
+            this.PasswordLabel.Visible = false;
             this.PasswordLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // EmailInput
@@ -380,7 +381,8 @@ namespace LibraMind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1348, 673);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1350, 673);
             this.Controls.Add(this.DashBoardPanel);
             this.Controls.Add(this.RightPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

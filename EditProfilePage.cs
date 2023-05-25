@@ -39,7 +39,7 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE USER_ID = @Param3";
+                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1, PASSWORD = @Param2 WHERE USER_ID = @Param3";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
 
                     command.Parameters.AddWithValue("@param1", Email);

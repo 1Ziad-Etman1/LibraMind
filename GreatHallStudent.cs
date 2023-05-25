@@ -24,7 +24,10 @@ namespace LibraMind
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            this.Hide(); // Hide the current form
+            BorrowPage borrowPage = new BorrowPage();
+            borrowPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
         }
 
         private void label6_Click(object sender, EventArgs e)

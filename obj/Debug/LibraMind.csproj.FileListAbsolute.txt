@@ -47,8 +47,11 @@ D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.exe
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.pdb
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.AdminProfile.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.BorrowPage.resources
-D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHall.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Profile.resources
-D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Page1.resources
-D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.Page2.resources
-D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.AssemblyReference.cache
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.EditProfilePage.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.EditUserPage.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHallAdmin.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ManageBookPage.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHallStudent.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ReturnPage.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ViewRequests.resources

@@ -156,6 +156,7 @@ namespace LibraMind
             this.StatisticsLabelBtn.Size = new System.Drawing.Size(155, 37);
             this.StatisticsLabelBtn.TabIndex = 6;
             this.StatisticsLabelBtn.Text = "Statistics";
+            this.StatisticsLabelBtn.Click += new System.EventHandler(this.StatisticsLabelBtn_Click);
             // 
             // DashBoardIcon
             // 

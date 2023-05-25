@@ -48,9 +48,9 @@ namespace LibraMind
             this.ReturnLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
+            this.Error = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Error = new System.Windows.Forms.Label();
             this.DashBoardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,6 +119,7 @@ namespace LibraMind
             this.ReturnLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ReturnLabelBtn.TabIndex = 4;
             this.ReturnLabelBtn.Text = "Return";
+            this.ReturnLabelBtn.Click += new System.EventHandler(this.ReturnLabelBtn_Click);
             // 
             // BorrowLabelBtn
             // 
@@ -131,6 +132,7 @@ namespace LibraMind
             this.BorrowLabelBtn.Size = new System.Drawing.Size(128, 37);
             this.BorrowLabelBtn.TabIndex = 3;
             this.BorrowLabelBtn.Text = "Borrow";
+            this.BorrowLabelBtn.Click += new System.EventHandler(this.BorrowLabelBtn_Click);
             // 
             // ProfileLabelBtn
             // 
@@ -279,6 +281,18 @@ namespace LibraMind
             this.RightPanel.Size = new System.Drawing.Size(989, 710);
             this.RightPanel.TabIndex = 7;
             // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.Error.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error.ForeColor = System.Drawing.Color.Yellow;
+            this.Error.Location = new System.Drawing.Point(199, 303);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(189, 31);
+            this.Error.TabIndex = 15;
+            this.Error.Text = "Wrong ISBN";
+            this.Error.Visible = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -299,18 +313,6 @@ namespace LibraMind
             this.label1.Size = new System.Drawing.Size(278, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter the ISBN :";
-            // 
-            // Error
-            // 
-            this.Error.AutoSize = true;
-            this.Error.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error.ForeColor = System.Drawing.Color.Yellow;
-            this.Error.Location = new System.Drawing.Point(199, 303);
-            this.Error.Name = "Error";
-            this.Error.Size = new System.Drawing.Size(189, 31);
-            this.Error.TabIndex = 15;
-            this.Error.Text = "Wrong ISBN";
-            this.Error.Visible = false;
             // 
             // ReturnPage
             // 

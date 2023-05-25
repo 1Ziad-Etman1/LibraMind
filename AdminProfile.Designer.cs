@@ -44,7 +44,7 @@ namespace LibraMind
             this.StatisticsLabelBtn = new System.Windows.Forms.Label();
             this.DashBoardLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.EmailLabel = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace LibraMind
             this.Nationallity = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
-            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.DashBoardPanel.SuspendLayout();
@@ -119,6 +119,7 @@ namespace LibraMind
             this.EditUserLabelBtn.Size = new System.Drawing.Size(158, 37);
             this.EditUserLabelBtn.TabIndex = 4;
             this.EditUserLabelBtn.Text = "Edit User";
+            this.EditUserLabelBtn.Click += new System.EventHandler(this.EditUserLabelBtn_Click);
             // 
             // ManageBookLabelBtn
             // 
@@ -131,6 +132,7 @@ namespace LibraMind
             this.ManageBookLabelBtn.Size = new System.Drawing.Size(220, 37);
             this.ManageBookLabelBtn.TabIndex = 3;
             this.ManageBookLabelBtn.Text = "Manage Book";
+            this.ManageBookLabelBtn.Click += new System.EventHandler(this.ManageBookLabelBtn_Click);
             // 
             // ProfileLabelBtn
             // 
@@ -143,6 +145,7 @@ namespace LibraMind
             this.ProfileLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ProfileLabelBtn.TabIndex = 2;
             this.ProfileLabelBtn.Text = "Profile";
+            this.ProfileLabelBtn.Click += new System.EventHandler(this.ProfileLabelBtn_Click);
             // 
             // ProfessorLabel
             // 
@@ -188,6 +191,7 @@ namespace LibraMind
             this.EditProfileLabelBtn.Size = new System.Drawing.Size(190, 37);
             this.EditProfileLabelBtn.TabIndex = 8;
             this.EditProfileLabelBtn.Text = "Edit Profile";
+            this.EditProfileLabelBtn.Click += new System.EventHandler(this.EditProfileLabelBtn_Click);
             // 
             // ViewRequistLabelBtn
             // 
@@ -200,6 +204,7 @@ namespace LibraMind
             this.ViewRequistLabelBtn.Size = new System.Drawing.Size(235, 37);
             this.ViewRequistLabelBtn.TabIndex = 7;
             this.ViewRequistLabelBtn.Text = "View Requests";
+            this.ViewRequistLabelBtn.Click += new System.EventHandler(this.ViewRequistLabelBtn_Click);
             // 
             // StatisticsLabelBtn
             // 
@@ -250,18 +255,16 @@ namespace LibraMind
             this.panel1.Size = new System.Drawing.Size(1005, 738);
             this.panel1.TabIndex = 5;
             // 
-            // label2
+            // UsernameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Harrington", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(318, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 56);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "The Great Hall";
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.UsernameLabel.Location = new System.Drawing.Point(93, 354);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
+            this.UsernameLabel.TabIndex = 43;
+            this.UsernameLabel.Visible = false;
             // 
             // EmailLabel
             // 
@@ -400,16 +403,18 @@ namespace LibraMind
             this.Password.Text = "Password: ";
             this.Password.Visible = false;
             // 
-            // UsernameLabel
+            // label2
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.UsernameLabel.Location = new System.Drawing.Point(93, 354);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(0, 41);
-            this.UsernameLabel.TabIndex = 43;
-            this.UsernameLabel.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Harrington", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(318, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(338, 56);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "The Great Hall";
             // 
             // AdminProfile
             // 

@@ -14,8 +14,6 @@ namespace LibraMind
         [STAThread]
         static void Main()
         {
-            User u ;
-            Book b = new Book();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FirstPageForm());

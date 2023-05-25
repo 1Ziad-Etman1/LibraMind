@@ -39,7 +39,7 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string query = "SELECT F_NAME, EMAIL, PASSWORD, NATIONALITY, POSITION FROM [USER] WHERE ID=@Param1";
+                    string query = "SELECT F_NAME, EMAIL, PASSWORD, NATIONALITY, POSITION FROM [USER] WHERE USER_ID=@Param1";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", id);
                     SqlDataReader reader = command.ExecuteReader();
@@ -75,6 +75,43 @@ namespace LibraMind
             {
                 ErrorLabel.Visible = true;
             }
+        }
+
+        private void ProfileLabelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageBookLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ManageBookPage MBPage = new ManageBookPage();
+            MBPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void EditUserLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            EditUserPage EUPage = new EditUserPage();
+            EUPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void EditProfileLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            EditProfilePage FPPage = new EditProfilePage();
+            FPPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void ViewRequistLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ViewRequests VRPage = new ViewRequests();
+            VRPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
         }
     }
 }

@@ -45,5 +45,34 @@ namespace LibraMind
                 UpdatePanel.Visible = true;
             }
         }
+
+        private void EditProfileLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            EditProfilePage EPPage = new EditProfilePage();
+            EPPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void ViewRequistLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ViewRequests VRPage = new ViewRequests();
+            VRPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void LogoutLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ReturnPage FPage = new ReturnPage();
+            FPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void EditUserLabelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

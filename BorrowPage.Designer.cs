@@ -39,6 +39,8 @@ namespace LibraMind
             this.label6 = new System.Windows.Forms.Label();
             this.StudentLabel = new System.Windows.Forms.Label();
             this.RightPanel = new System.Windows.Forms.Panel();
+            this.IdInput = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.ISBNLabel = new System.Windows.Forms.Label();
             this.ISBN = new System.Windows.Forms.Label();
             this.AvailableLable = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@ namespace LibraMind
             this.BorrowLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.DashBoardPanel = new System.Windows.Forms.Panel();
-            this.IdInput = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DashBoardIcon)).BeginInit();
             this.RightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,6 +118,7 @@ namespace LibraMind
             this.BorrowLabelBtn.Size = new System.Drawing.Size(128, 37);
             this.BorrowLabelBtn.TabIndex = 3;
             this.BorrowLabelBtn.Text = "Borrow";
+            this.BorrowLabelBtn.Click += new System.EventHandler(this.BorrowLabelBtn_Click);
             // 
             // ProfileLabelBtn
             // 
@@ -179,6 +180,27 @@ namespace LibraMind
             this.RightPanel.Name = "RightPanel";
             this.RightPanel.Size = new System.Drawing.Size(1005, 754);
             this.RightPanel.TabIndex = 5;
+            this.RightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightPanel_Paint);
+            // 
+            // IdInput
+            // 
+            this.IdInput.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInput.Location = new System.Drawing.Point(412, 289);
+            this.IdInput.Name = "IdInput";
+            this.IdInput.Size = new System.Drawing.Size(307, 37);
+            this.IdInput.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(145, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 36);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Enter your ID: ";
             // 
             // ISBNLabel
             // 
@@ -316,26 +338,6 @@ namespace LibraMind
             this.DashBoardPanel.Name = "DashBoardPanel";
             this.DashBoardPanel.Size = new System.Drawing.Size(339, 754);
             this.DashBoardPanel.TabIndex = 4;
-            // 
-            // IdInput
-            // 
-            this.IdInput.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdInput.Location = new System.Drawing.Point(412, 289);
-            this.IdInput.Name = "IdInput";
-            this.IdInput.Size = new System.Drawing.Size(307, 37);
-            this.IdInput.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(145, 286);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 36);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Enter your ID: ";
             // 
             // BorrowPage
             // 

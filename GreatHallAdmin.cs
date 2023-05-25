@@ -64,5 +64,10 @@ namespace LibraMind
             vr.ShowDialog(); // Show the other form as a modal dialog
             this.Close(); // Close the current form
         }
+
+        private void StatisticsLabelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

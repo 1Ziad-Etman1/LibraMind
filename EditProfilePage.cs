@@ -43,7 +43,10 @@ namespace LibraMind
 
         private void ViewRequistLabelBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide(); // Hide the current form
+            ViewRequests VRPage = new ViewRequests();
+            VRPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
         }
 
         private void StatisticsLabelBtn_Click(object sender, EventArgs e)
@@ -138,7 +141,7 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE ID = @Param3";
+                    string sqlCommand = "UPDATE [USER] SET EMAIL = @Param1 AND PASSWORD = @Param2 WHERE USER_ID = @Param3";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
 
                     command.Parameters.AddWithValue("@param1", Email);
@@ -173,4 +176,4 @@ namespace LibraMind
             }
         }
     }
-}
+

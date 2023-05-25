@@ -76,5 +76,17 @@ namespace LibraMind
             }
         }
 
+        private void BorrowLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            BorrowPage BPage = new BorrowPage();
+            BPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void RightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

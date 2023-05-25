@@ -73,6 +73,7 @@ namespace LibraMind
             this.EditProfileLabelBtn.Size = new System.Drawing.Size(190, 37);
             this.EditProfileLabelBtn.TabIndex = 8;
             this.EditProfileLabelBtn.Text = "Edit Profile";
+            this.EditProfileLabelBtn.Click += new System.EventHandler(this.EditProfileLabelBtn_Click);
             // 
             // ViewRequistLabelBtn
             // 
@@ -85,6 +86,7 @@ namespace LibraMind
             this.ViewRequistLabelBtn.Size = new System.Drawing.Size(235, 37);
             this.ViewRequistLabelBtn.TabIndex = 7;
             this.ViewRequistLabelBtn.Text = "View Requests";
+            this.ViewRequistLabelBtn.Click += new System.EventHandler(this.ViewRequistLabelBtn_Click);
             // 
             // StatisticsLabelBtn
             // 
@@ -119,6 +121,7 @@ namespace LibraMind
             this.LogoutLabelBtn.Size = new System.Drawing.Size(130, 37);
             this.LogoutLabelBtn.TabIndex = 5;
             this.LogoutLabelBtn.Text = "Log out";
+            this.LogoutLabelBtn.Click += new System.EventHandler(this.LogoutLabelBtn_Click);
             // 
             // EditUserLabelBtn
             // 
@@ -131,6 +134,7 @@ namespace LibraMind
             this.EditUserLabelBtn.Size = new System.Drawing.Size(158, 37);
             this.EditUserLabelBtn.TabIndex = 4;
             this.EditUserLabelBtn.Text = "Edit User";
+            this.EditUserLabelBtn.Click += new System.EventHandler(this.EditUserLabelBtn_Click);
             // 
             // ManageBookLabelBtn
             // 

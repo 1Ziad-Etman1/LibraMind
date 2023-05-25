@@ -48,7 +48,7 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string query = "SELECT F_NAME, EMAIL, PASSWORD, NATIONALITY, POSITION FROM [USER] WHERE ID=@Param1";
+                    string query = "SELECT F_NAME, EMAIL, PASSWORD, NATIONALITY, POSITION FROM [USER] WHERE USER_ID=@Param1";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@Param1", id);
                     SqlDataReader reader = command.ExecuteReader();
@@ -78,12 +78,34 @@ namespace LibraMind
                     NationalityLabel.Visible = true;
                     NationalityLabel.Text = nationality;
                     ErrorLabel.Visible = false;
+                    ProfilePic.Visible = true;
                 }
             }
             else
             {
                 ErrorLabel.Visible = true;
             }
+        }
+
+        private void ProfileLabelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BorrowLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            BorrowPage BPage = new BorrowPage();
+            BPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void ReturnLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            ReturnPage RPage = new ReturnPage();
+            RPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
         }
     }
 }

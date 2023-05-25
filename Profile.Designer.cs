@@ -31,6 +31,12 @@ namespace LibraMind
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
+            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.OkBtn = new System.Windows.Forms.Label();
+            this.IdInput = new System.Windows.Forms.TextBox();
+            this.IdLabel = new System.Windows.Forms.Label();
             this.PositionLabel = new System.Windows.Forms.Label();
             this.Position = new System.Windows.Forms.Label();
             this.NationalityLabel = new System.Windows.Forms.Label();
@@ -49,12 +55,6 @@ namespace LibraMind
             this.ProfileLabelBtn = new System.Windows.Forms.Label();
             this.StudentLabel = new System.Windows.Forms.Label();
             this.DashBoardLabel = new System.Windows.Forms.Label();
-            this.IdLabel = new System.Windows.Forms.Label();
-            this.IdInput = new System.Windows.Forms.TextBox();
-            this.OkBtn = new System.Windows.Forms.Label();
-            this.ErrorLabel = new System.Windows.Forms.Label();
-            this.EmailLabel = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             this.DashBoardPanel.SuspendLayout();
@@ -86,6 +86,74 @@ namespace LibraMind
             this.panel1.Size = new System.Drawing.Size(1005, 760);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // EmailLabel
+            // 
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.EmailLabel.Location = new System.Drawing.Point(505, 205);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(0, 41);
+            this.EmailLabel.TabIndex = 30;
+            this.EmailLabel.Visible = false;
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Email.Location = new System.Drawing.Point(333, 205);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(134, 41);
+            this.Email.TabIndex = 29;
+            this.Email.Text = "Email:";
+            this.Email.Visible = false;
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(686, 258);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(188, 37);
+            this.ErrorLabel.TabIndex = 28;
+            this.ErrorLabel.Text = "Required!";
+            this.ErrorLabel.Visible = false;
+            // 
+            // OkBtn
+            // 
+            this.OkBtn.AutoSize = true;
+            this.OkBtn.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OkBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.OkBtn.Image = ((System.Drawing.Image)(resources.GetObject("OkBtn.Image")));
+            this.OkBtn.Location = new System.Drawing.Point(583, 258);
+            this.OkBtn.Name = "OkBtn";
+            this.OkBtn.Size = new System.Drawing.Size(65, 42);
+            this.OkBtn.TabIndex = 27;
+            this.OkBtn.Text = "OK";
+            this.OkBtn.Click += new System.EventHandler(this.OkBtn_Click);
+            // 
+            // IdInput
+            // 
+            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInput.Location = new System.Drawing.Point(450, 258);
+            this.IdInput.Name = "IdInput";
+            this.IdInput.Size = new System.Drawing.Size(87, 37);
+            this.IdInput.TabIndex = 24;
+            this.IdInput.WordWrap = false;
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IdLabel.Location = new System.Drawing.Point(256, 258);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(188, 41);
+            this.IdLabel.TabIndex = 12;
+            this.IdLabel.Text = "Your ID: ";
             // 
             // PositionLabel
             // 
@@ -253,6 +321,7 @@ namespace LibraMind
             this.ReturnLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ReturnLabelBtn.TabIndex = 4;
             this.ReturnLabelBtn.Text = "Return";
+            this.ReturnLabelBtn.Click += new System.EventHandler(this.ReturnLabelBtn_Click);
             // 
             // BorrowLabelBtn
             // 
@@ -265,6 +334,7 @@ namespace LibraMind
             this.BorrowLabelBtn.Size = new System.Drawing.Size(128, 37);
             this.BorrowLabelBtn.TabIndex = 3;
             this.BorrowLabelBtn.Text = "Borrow";
+            this.BorrowLabelBtn.Click += new System.EventHandler(this.BorrowLabelBtn_Click);
             // 
             // ProfileLabelBtn
             // 
@@ -277,6 +347,7 @@ namespace LibraMind
             this.ProfileLabelBtn.Size = new System.Drawing.Size(119, 37);
             this.ProfileLabelBtn.TabIndex = 2;
             this.ProfileLabelBtn.Text = "Profile";
+            this.ProfileLabelBtn.Click += new System.EventHandler(this.ProfileLabelBtn_Click);
             // 
             // StudentLabel
             // 
@@ -301,74 +372,6 @@ namespace LibraMind
             this.DashBoardLabel.Size = new System.Drawing.Size(208, 42);
             this.DashBoardLabel.TabIndex = 0;
             this.DashBoardLabel.Text = "DashBoard";
-            // 
-            // IdLabel
-            // 
-            this.IdLabel.AutoSize = true;
-            this.IdLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.IdLabel.Location = new System.Drawing.Point(256, 258);
-            this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(188, 41);
-            this.IdLabel.TabIndex = 12;
-            this.IdLabel.Text = "Your ID: ";
-            // 
-            // IdInput
-            // 
-            this.IdInput.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdInput.Location = new System.Drawing.Point(450, 258);
-            this.IdInput.Name = "IdInput";
-            this.IdInput.Size = new System.Drawing.Size(87, 37);
-            this.IdInput.TabIndex = 24;
-            this.IdInput.WordWrap = false;
-            // 
-            // OkBtn
-            // 
-            this.OkBtn.AutoSize = true;
-            this.OkBtn.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OkBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OkBtn.Image = ((System.Drawing.Image)(resources.GetObject("OkBtn.Image")));
-            this.OkBtn.Location = new System.Drawing.Point(583, 258);
-            this.OkBtn.Name = "OkBtn";
-            this.OkBtn.Size = new System.Drawing.Size(65, 42);
-            this.OkBtn.TabIndex = 27;
-            this.OkBtn.Text = "OK";
-            this.OkBtn.Click += new System.EventHandler(this.OkBtn_Click);
-            // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(686, 258);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(188, 37);
-            this.ErrorLabel.TabIndex = 28;
-            this.ErrorLabel.Text = "Required!";
-            this.ErrorLabel.Visible = false;
-            // 
-            // EmailLabel
-            // 
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.EmailLabel.Location = new System.Drawing.Point(505, 205);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(0, 41);
-            this.EmailLabel.TabIndex = 30;
-            this.EmailLabel.Visible = false;
-            // 
-            // Email
-            // 
-            this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Lucida Calligraphy", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Email.Location = new System.Drawing.Point(333, 205);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(134, 41);
-            this.Email.TabIndex = 29;
-            this.Email.Text = "Email:";
-            this.Email.Visible = false;
             // 
             // Profile
             // 

@@ -47,10 +47,10 @@ namespace LibraMind
                 command.Parameters.AddWithValue("@Param1", ISBNInput.Text);
                 SqlDataReader reader = command.ExecuteReader();
                 reader.Read();
-                int Avaliable = reader.GetInt32(0);
+                bool Avaliable = reader.GetBoolean(0);
                 reader.Close();
                 con.Close();
-                if (Avaliable == 0)
+                if (Avaliable == false)
                 {
                     Error.Visible = true;
                 }
@@ -62,6 +62,19 @@ namespace LibraMind
 
                 }
             }
+        }
+
+        private void BorrowLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the current form
+            BorrowPage BPage = new BorrowPage();
+            BPage.ShowDialog(); // Show the other form as a modal dialog
+            this.Close(); // Close the current form
+        }
+
+        private void ReturnLabelBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

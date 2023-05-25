@@ -274,10 +274,6 @@
     <Compile Include="ManageBookPage.Designer.cs">
       <DependentUpon>ManageBookPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page2.cs" />
-    <Compile Include="Page2.Designer.cs">
-      <DependentUpon>Page2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,10 +297,6 @@
     </Compile>
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page1.cs" />
-    <Compile Include="Page1.Designer.cs">
-      <DependentUpon>Page1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -336,18 +328,12 @@
     <EmbeddedResource Include="ManageBookPage.resx">
       <DependentUpon>ManageBookPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Page1.resx">
-      <DependentUpon>Page1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GreatHallStudent.resx">
       <DependentUpon>GreatHallStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LoginForm1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page2.resx">
-      <DependentUpon>Page2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

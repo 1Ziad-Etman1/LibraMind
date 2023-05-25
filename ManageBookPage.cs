@@ -82,8 +82,8 @@ namespace LibraMind
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "INSERT INTO [BOOK] (TITLE, ISBN, COPIES)" +
-                        " VALUES (@Param1, @Param2,@Param3)";
+                    string sqlCommand = "INSERT INTO [BOOK] (TITLE, ISBN, COPIES, PUBLICATION_YEAR, AUTHER_ID, P_ID, PRICE, EDITION, AVALIABLE, NO_PAGES)" +
+                        " VALUES (@Param1, @Param2, @Param3, 2010, 22, 11, 5.5, 1, 1, 300)";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
                     command.Parameters.AddWithValue("@param1", title);
                     command.Parameters.AddWithValue("@param2", isbn);
@@ -103,15 +103,14 @@ namespace LibraMind
 
         private void DropBtn_Click(object sender, EventArgs e)
         {
-            if (BookNameInput.TextLength > 0 && ISBNInput.TextLength > 0 && NumOfCopiesInput.TextLength > 0)
+            if (ISBNInputDrop.TextLength > 0)
             {
-                string title = BookNameInput.Text;
                 string isbn = ISBNInputDrop.Text;
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlCommand = "DELETE FROM BOOK WHERE ISBN = @param2";
+                    string sqlCommand = "DELETE FROM BOOK WHERE ISBN = @param1";
                     SqlCommand command = new SqlCommand(sqlCommand, con);
                     command.Parameters.AddWithValue("@param1", isbn);
 

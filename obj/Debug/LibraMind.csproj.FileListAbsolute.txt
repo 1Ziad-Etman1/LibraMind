@@ -55,3 +55,4 @@ D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ManageBookPage.r
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.GreatHallStudent.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ReturnPage.resources
 D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.ViewRequests.resources
+D:\University\DataBase\DB_Project\LibraMind\obj\Debug\LibraMind.csproj.AssemblyReference.cache
